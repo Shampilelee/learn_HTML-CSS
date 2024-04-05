@@ -1,0 +1,26 @@
+body{
+    background-color: black;
+    color: white;
+    text-align: center;
+}
+.pagination{
+text-align: center;
+}
+.pagination a{
+    color: rgb(255, 255, 255);
+    /* THIS REMOVES THE UNDERLINE FROM THE LINK */
+    text-decoration: none;
+    padding: 8px 15px;
+    display: inline-block;
+}
+.pagination a.active{
+    background-color: rgb(162, 240, 43);
+    color: rgb(202, 18, 18);
+    font-weight: bold;
+    border-radius: 5px;
+}
+/* FIND ANY ELEMENT THAT ARE FOUND IN THE ACTIVE CLASS */
+.pagination a:hover:not(.active){
+    background-color: rgb(220, 61, 61);
+    border-radius: 5px;
+}
