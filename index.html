@@ -37,28 +37,36 @@
             <!-- LIST -->
             <!-- UNORDERED LIST, '<li>' MEANS LIST ITEM -->
             <br>
-            <p>-- LIST --</p>
-            <ul>
-                <li>PREMIUM ACCOUNT</li>
-                <li>REGULAR ACCOUNT</li>
-                <li>FREE ACCOUNT</li>
-            </ul>
+            <div class="list_Title">-- LIST --</div>
+            <div class="ul_list">
+                <ul>
+                    <li>PREMIUM ACCOUNT</li>
+                    <li>REGULAR ACCOUNT</li>
+                    <li>FREE ACCOUNT</li>
+                </ul>
+            </div>
+            
             <!-- ORDERED LIST -->
-            <ol>
-                <li>PREMIUM ACCOUNT</li>
-                <li>REGULAR ACCOUNT</li>
-                <li>FREE ACCOUNT</li>
-            </ol>
-
-            <br>
+            <div class="ol_list">
+                <ol>
+                    <li>PREMIUM ACCOUNT</li>
+                    <li>REGULAR ACCOUNT</li>
+                    <li>FREE ACCOUNT</li>
+                </ol>
+            </div>
+            
             <!-- DESCRIPTION LIST-->
-            <p id="dl_p">-- DESCRIPTION LIST--</p>
-            <dl>
-                <dt>ANACHRONISM</dt>
-                <dd>Something out of place for the time period.</dd>
-                <dt>BELIE</dt>
-                <dd>To convey a misleading impression of; to distort.</dd>
-            </dl>
+            <div class="dl_title">DESCRIPTION LIST</div>
+            <div class="dl_list">
+                <dl>
+                    <dt>ANACHRONISM</dt>
+                    <dd>Something out of place for the time period.</dd>
+                    <dt>BELIE</dt>
+                    <dd>To convey a misleading impression of; to distort.</dd>
+                </dl>
+            </div>
+            
+
         </aside>
         
 
@@ -145,7 +153,7 @@
         </pre>
 
         <br>
-        <p>-- HORIZONTAL LINE --</p>
+        <div class="hor_line">HORIZONTAL LINE</div>
         <hr>
         
         <!-- TO OPEN PAGE IN A NEW TAG -->
@@ -163,16 +171,17 @@
         <BR>
         
         <BR>
-        <BR>
         
-        <p>-- Gif --</p>
-        <!-- ADDING GIF, YOU CAN CHANGE THE SIZE, WITH THE HEIGHT AND WIDTH ATTRIBUTES, YOU CAN TURN IT TO A LINK -->
-        <img src="assets/images/HAPPY.gif"
-        alt="HAPPY MAN"
-        height="100"
-        width="300"
-        >
-
+        <div class="gif_img">
+            <p>-- Gif --</p>
+            <!-- ADDING GIF, YOU CAN CHANGE THE SIZE, WITH THE HEIGHT AND WIDTH ATTRIBUTES, YOU CAN TURN IT TO A LINK -->
+            <img src="assets/images/HAPPY.gif"
+            alt="HAPPY MAN"
+            height="100"
+            width="300"
+            >
+        </div>
+        
 
         <BR>
 
@@ -285,54 +294,63 @@
                     <td>10-2</td>
                 </tr>
             </table>
-            <br>
+            
 
             <!-- BUTTON -->
             <!-- SOME JAVASCRIPT GOING ON HERE -->
-            <p id="greeting">Hello</p>
+            <p id="hello">Hello</p>
             <script>
+                
                 function doSomeThing() {
-                    document.getElementById("greeting").innerHTML = "Hey";
+                    if (document.getElementById("hello").innerHTML == "Hey") {
+                        document.getElementById("hello").innerHTML = "Hello";
+                    } 
+                    else {
+                        document.getElementById("hello").innerHTML = "Hey";
+                    }
                 }
             </script>
+             
             
-            <button onclick="doSomeThing()" style="font-size:25px; background-color: gray; color:white; border-radius: 25px;">
-                <p>Click me</p>
-            </button>
-            <br><br>
-
-            <p>-- Image LINK --</p>
-            <!-- ADDING IMAGE, YOU CAN CHANGE THE SIZE, WITH THE HEIGHT AND WIDTH ATTRIBUTES, YOU CAN TURN IT TO A LINK -->
-            <a href="https://www.google.com/search?sca_esv=f82d15fe49af92c2&q=GIDIGBA&tbm=isch&source=lnms&sa=X&ved=2ahUKEwiD4IXbmcWEAxWqQUEAHe7xB0AQ0pQJegQIDRAB&biw=1366&bih=647&dpr=1#imgrc=16_8BkeeIxpOLM&imgdii=oAiy1UL8rLf9lM" target="_blank">
-                <img src="assets/images/GIDIGBA.jpg"
-                    alt="this is Stonebwoy's album at cover for firm and strong GIDIGBA"
-                    height="100"
-                    width="500"
-                >
-            </a>
+            <Button class="Click_Me" onclick="doSomeThing()">
+                Click me
+            </Button>
+            
             <br>
-            <a href="https://www.youtube.com/watch?v=FnRzqXkp9do" target="_blank"> original video </a>
-            <h4>GIDIGBA (FIRM & STRONG)</h4>
-            <h5>Song by Stonebwoy</h5>
 
+            <div class="img_link">
+                <p>-- Image LINK --</p>
+                <!-- ADDING IMAGE, YOU CAN CHANGE THE SIZE, WITH THE HEIGHT AND WIDTH ATTRIBUTES, YOU CAN TURN IT TO A LINK -->
+                <a href="https://www.google.com/search?sca_esv=f82d15fe49af92c2&q=GIDIGBA&tbm=isch&source=lnms&sa=X&ved=2ahUKEwiD4IXbmcWEAxWqQUEAHe7xB0AQ0pQJegQIDRAB&biw=1366&bih=647&dpr=1#imgrc=16_8BkeeIxpOLM&imgdii=oAiy1UL8rLf9lM" target="_blank">
+                    <img src="assets/images/GIDIGBA.jpg"
+                        alt="this is Stonebwoy's album at cover for firm and strong GIDIGBA"
+                        height="100"
+                        width="500"
+                    >
+                </a>
+
+                <!-- Original Video Link -->
+                <a href="https://www.youtube.com/watch?v=FnRzqXkp9do" target="_blank"> original video </a>
+                
+                <h4>GIDIGBA (FIRM & STRONG)</h4>
+                <h5>Song by Stonebwoy</h5>
+            </div> 
             
-            
-
-
-
 
             <br>
             <!-- SHOWCASING CSS CODE -->
-
-            <h3>--- CSS SKILLS ---</h3>
+            <div class="css_style">
+                <h3>--- CSS SKILLS ---</h3>
+            </div>
+            
             <div id="showPrice">
                 <p>SHOW PRICE</p>
                 <h4>$756.99</h4>
             </div>
 
             <br>
-            <h5>--- PAGINATION ---</h5>
             <div class="pagination">
+                <h5>--- PAGINATION ---</h5>
                 <a href="index.html">👈</a>
                 <a href="index.html" class="active">1</a>
                 <a href="page2.html">2</a>
@@ -341,8 +359,8 @@
             </div>
             
             <br>
-            <h5>--- NAVIGATION BAR ---</h5>
             <div class="navbar">
+                <h5>--- NAVIGATION BAR ---</h5>
                 <ul>
                     <li><a>Home</a></li>
                     <li><a>History</a></li>
@@ -353,9 +371,9 @@
             </div>
             
             <br>
-            <h6>--- DROPDOWN MENU ---</h6>
             <div class="dropdown">
-                <button>Fruits</button>
+                <h6>--- DROPDOWN MENU ---</h6>
+                <button class="Fruits">Fruits</button>
                 
                 <div class="content">
                     <a href="" target="_blank">mango</a>
@@ -364,15 +382,17 @@
                 </div>
             </div>
 
+            
+
             <br><br><br><br><br><br><br>
             <!-- TRANSFORMARION -->
-            <h6>--- TRANSFORMARION ---</h6>
+            <h6 id="transform">--- TRANSFORMARION ---</h6>
             <div id="box1">G</div>
             
 
             <br>
             <!-- ANIMATION -->
-            <h5>--- ANIMATION ---</h5>
+            <h5 id="animation">--- ANIMATION ---</h5>
             
             <div id="boxs">
                 <div id="box2">⬅</div>
@@ -386,7 +406,7 @@
                 <div id="box10">🤏</div>
                 <div id="box11">Fade Out</div>
                 <div id="box12">Fade In</div>
-                <div id="box13"><p>Hover Here👋</p></div>
+                <div id="box13">Hover Here👋</div>
                 <div id="box14">Glow</div>
             </div>
             

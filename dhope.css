@@ -34,8 +34,8 @@ header a {
 }
 
 main {
+    width: 100%;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    margin-left: 5px;
     margin-right: 5px;
 }
 
@@ -79,20 +79,27 @@ article table td {
     background-color: rgb(4, 5, 6);
 }
 
-article button {
-    width: 80px;
-    height: 40px;
-    text-align: center;
-}
 
-article button p {
-    font-size: 10px;
-    color: black;
-    font-weight: bolder;
+/* BUTTON */
+button {
+    background-color: rgb(13, 129, 19);
+    color: rgb(255, 255, 255);
+    text-align: center;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    height: 20px;
+    font-size: 11px;
 }
 
 article #showPrice {
     width: 100px;
+}
+
+article #showPrice p {
+    color: rgb(24, 218, 40);
+    font-weight: bold;
+    font-size: 12px;
 }
 
 article #showPrice h4 {
@@ -101,57 +108,14 @@ article #showPrice h4 {
 
 article #showPrice:hover h4 {
     display: block;
+    color: aqua;
 }
 
-
-article .dropdown {
-    display: inline-block;
+/* PAGINATION */
+article .pagination a{
+    font-size: 20px;
+    padding: 10px;
 }
-
-article .dropdown button {
-    background-color: rgb(22, 108, 41);
-    color: white;
-    /* 10px heigth 15px weigth */
-    padding: 10px 15px;
-    /* REMOVE BORDER */
-    border: none;
-
-    cursor: pointer;
-}
-
-article .dropdown a {
-    /* THIS WILL ARRANGE THE LINKS IN A LIST FORM */
-    display: block;
-
-    color: black;
-    text-decoration: none;
-    padding: 10px 15px;
-}
-
-article .dropdown .content {
-    display: none;
-    position: absolute;
-    background-color: rgb(240, 255, 255);
-    min-width: 100px;
-    /* SHADOW, 2px(heigth) 2px(width) 5px(blur) black(color) */
-    box-shadow: 2px 2px 5px black;
-}
-
-/* SHOW CONTENT WHEN HOVERED UPON THE BUTTON */
-article .dropdown:hover .content {
-    display: block;
-}
-
-article .dropdown:hover button {
-    background-color: rgb(29, 167, 16);
-}
-
-article .dropdown a:hover {
-    background-color: aqua;
-    font-weight: bold;
-}
-
-
 
 article .navbar ul {
     /* TO REMOVE BULLET POINTS IN LIST USE THIS CODE BELOW */
@@ -183,6 +147,51 @@ article .navbar a:hover {
     float: left;
 }
 */
+
+
+
+/* DROPDOWN MENU BUTTON */
+article .dropdown {
+    display: inline-block;
+}
+article .dropdown .Fruits {
+    width: 70px;
+    height: 23px;
+}
+article .dropdown a {
+    /* THIS WILL ARRANGE THE LINKS IN A LIST FORM */
+    display: block;
+
+    color: black;
+    text-decoration: none;
+    padding: 10px 15px;
+}
+article .dropdown .content {
+    display: none;
+    position: absolute;
+    background-color: rgb(240, 255, 255);
+    min-width: 100px;
+    /* SHADOW, 2px(heigth) 2px(width) 5px(blur) black(color) */
+    box-shadow: 2px 2px 5px black;
+}
+/* SHOW CONTENT WHEN HOVERED UPON THE BUTTON */
+article .dropdown:hover .content {
+    display: block;
+}
+article .dropdown:hover button {
+    background-color: rgb(29, 167, 16);
+}
+article .dropdown a:hover {
+    background-color: aqua;
+    font-weight: bold;
+}
+
+
+
+
+
+
+
 
 
 /* TRANSFORMATION */
@@ -467,6 +476,278 @@ footer a {
 
 
 
+/* LAPTOP 2560px 4K SCREEN */
+@media screen and (max-width: 2570px) {
+    header #header_name {
+        font-size: 50px;
+        font-weight: bold;
+    }
+    header a {
+        font-size: 21px;
+        font-weight: bold;
+        margin: 150px;
+    }
+    /* Titles */
+    h1 {
+        font-size: 42px;
+        font-weight: bolder;
+    }
+
+
+
+
+
+    /* ASIDE */
+    /* Paragraphing 'p' */
+    p {
+        font-size: 17px;
+    }
+    aside {
+        text-align: center;
+    }
+    .list_Title {
+        font-size: 35px;
+    }
+    .ul_list li {
+        font-size: 18px;
+    }
+    .ol_list li {
+        font-size: 22px;
+    }
+    .dl_title {
+        font-size: 25px;
+        font-weight: bold;
+    }
+    .dl_list dl {
+        font-size: 17px;
+    }
+
+
+
+
+
+    /* SECTION */
+    /* Lyrices */
+    h2 {
+        font-size: 28px;
+        font-weight: bold;
+    }
+    pre {
+        font-size: 20px;
+    }
+    .hor_line {
+        font-size: 11px;
+    }
+    main a {
+        font-size: 22px;
+    }
+
+    .gif_img p {
+        font-size: 30px;
+    }
+    img {
+        width: 72%;
+        height: 190px;
+    }
+
+    audio {
+        width: 370px;
+        height: 77px;
+    }
+    video {
+        width: 600px;
+    }
+
+    /* FORMS */
+    label {
+        font-size: 20px;
+    }
+    input {
+        width: 550px;
+        height: 50px;
+        font-size: 31px;
+    }
+    textarea {
+        width: 400px;
+        height: 100px;
+    }
+
+
+
+
+
+    /* ARTICLE */
+    article {
+        text-align: center;
+    }
+    table {
+        font-size: 20px;
+    }
+    #hello {
+        font-size: 40px;
+    }
+    .Click_Me{
+        background-color: rgb(12, 12, 121);
+        color: rgb(224, 224, 243);
+        width: 270px;
+        height: 50px;
+        font-size: 25px;
+    }
+    /* -- Image LINK -- */
+    .img_link p {
+        font-size: 20px;
+    }
+    /* GIDIGBA */
+    .img_link h4 {
+        font-size: 30px;
+    }
+    /* Song by Stonebwoy */
+    .img_link h5 {
+        font-size: 25px;
+        font-weight: lighter;
+    }
+    /* -- CSS SKILLS -- */
+    .css_style h3 {
+        font-size: 40px;
+    }
+    article #showPrice p {
+        font-size: 22px;
+    }
+    article #showPrice:hover h4 {
+        font-size: 35px;
+    }
+    /* pagination */
+    article .pagination h5 {
+        font-size: 20px;
+    }
+    article .pagination a{
+        font-size: 30px;
+        padding: 10px;
+    }
+    /* -- NAVIGATION BAR -- */
+    .navbar h5 {
+        font-size: 20px;
+    }
+    .navbar a {
+        font-size: 27px;
+    }
+    /* -- DROPDOWN MENU -- */
+    .dropdown h6 {
+        font-size: 18px;
+    }
+    article .dropdown .Fruits {
+        width: 240px;
+        height: 65px;
+        font-size: 27px;
+    }
+    article .dropdown .content {
+        min-width: 255px;
+    }
+    
+    /* TRANSFORMATION */
+    #transform {
+        font-size: 22px;
+    }
+    article #box1 {
+        width: 200px;
+        height: 200px;
+        font-size: 8em;
+        /* FOR POSITION OR ALIGNMENT */
+        transform: translateX(100%) rotateZ(90deg) scale(0.5) skewX(45deg);
+    }
+
+    
+    /* ANIMATION */
+    /* ---ANIMATION--- */
+    #animation {
+        font-size: 23px;
+    }
+    #boxs{
+        /* IF WE ADD THE 'height: 100px;' HERE, IT WILL DISPLACE THE FOOTER, THATS WHY IT'S NOT HERE. */
+        width: 120px;
+    }
+    /* Slide Left */
+    article #box2 {
+        height: 120px;
+        font-size: 5em;
+    }
+    /* Slide Right */
+    article #box3 {
+        height: 120px;
+        font-size: 5em;
+    }
+    /* Slide Up */
+    article #box4 {
+        height: 120px;
+        font-size: 5em;
+    }
+    /* Slide Down */
+    article #box5 {
+        height: 120px;
+        font-size: 5em;
+    }
+    article #box6 {
+        height: 120px;
+        font-size: 2em;
+    }
+    /* ROTATE VERTICALLY */
+    article #box7 {
+        height: 120px;
+        font-size: 5em;
+    }
+    /* ROTATE CIRCULALY */
+    article #box8 {
+        height: 120px;
+        font-size: 5em;
+    }
+    /* MAKE ELEMENT GROW(ENLARGE) */
+    article #box9 {
+        height: 120px;
+        font-size: 5em;
+    }
+    /* MAKE ELEMENT SMALL */
+    article #box10 {
+        height: 120px;
+        font-size: 5em;
+    }
+    /* FADE ELEMENT */
+    article #box11 {
+        height: 120px;
+        font-size: 2.4em;
+        color: black;
+    }
+    /* TO FADE IN AN ELEMENT */
+    article #box12 {
+        background-color: rgb(0, 0, 0);
+        height: 120px;
+        font-size: 2.4em;
+    }
+    /* CHANGE THE COLOR OF AN ELEMENT */
+    article #box13 {
+        height: 120px;
+        font-size: 2em;
+    }
+    article #box13:hover {
+        /* MOVE THE ANIMATION NAME AND DURATION TO HERE, THAT ALL. */
+        animation-name: colorChange;
+        animation-duration: 15s;
+    }
+    /* THE GLOW EFFECT */
+    article #box14 {
+        height: 120px;
+        font-size: 3em;
+    }
+}
+
+
+
+
+
+
+
+
+
+/* LAPTOP 1460 LARGE SCREEN NOT USED */
 
 
 
@@ -477,8 +758,534 @@ footer a {
 
 
 
+/* LAPTOP 1024px SCREEN */
+@media screen and (max-width: 1030px){
+    header #header_name {
+        font-size: 23px;
+        font-weight: bold;
+    }
+    header a {
+        font-size: 9.3px;
+        font-weight: bold;
+        margin: 90px;
+    }
+    /* Titles */
+    h1 {
+        font-size: 20px;
+        font-weight: bolder;
+    }
 
-/* TABLET SCREEN */
+
+
+
+
+    /* ASIDE */
+    /* Paragraphing 'p' */
+    p {
+        font-size: 11px;
+    }
+    aside {
+        text-align: center;
+    }
+    .list_Title {
+        font-size: 15px;
+    }
+    .ul_list li {
+        font-size: 12px;
+    }
+    .ol_list li {
+        font-size: 12px;
+    }
+    .dl_title {
+        font-size: 13px;
+        font-weight: bold;
+    }
+    .dl_list dl {
+        font-size: 12px;
+    }
+
+
+
+
+
+    /* SECTION */
+    /* Lyrices */
+    h2 {
+        font-size: 16px;
+        font-weight: bold;
+    }
+    pre {
+        font-size: 10.3px;
+    }
+    .hor_line {
+        font-size: 11px;
+    }
+    main a {
+        font-size: 14px;
+    }
+
+    .gif_img p {
+        font-size: 12.5px;
+    }
+    img {
+        width: 88%;
+        height: 90px;
+    }
+
+    audio {
+        width: 270px;
+        height: 27px;
+    }
+    video {
+        width: 270px;
+    }
+
+    /* FORMS */
+    label {
+        font-size: 14px;
+    }
+    input {
+        width: 360px;
+        height: 20px;
+        font-size: 11px;
+    }
+    textarea {
+        width: 250px;
+        height: 60px;
+    }
+
+
+
+
+
+    /* ARTICLE */
+    article {
+        text-align: center;
+    }
+    table {
+        font-size: 10px;
+    }
+    #hello {
+        font-size: 20px;
+    }
+    .Click_Me{
+        background-color: rgb(12, 12, 121);
+        color: rgb(224, 224, 243);
+        width: 100px;
+        height: 30px;
+    }
+    /* -- Image LINK -- */
+    .img_link p {
+        font-size: 11px;
+    }
+    /* GIDIGBA */
+    .img_link h4 {
+        font-size: 17px;
+    }
+    /* Song by Stonebwoy */
+    .img_link h5 {
+        font-size: 9px;
+        font-weight: lighter;
+    }
+    /* -- CSS SKILLS -- */
+    .css_style h3 {
+        font-size: 20px;
+    }
+    article #showPrice p {
+        font-size: 12px;
+    }
+    article #showPrice:hover h4 {
+        font-size: 15px;
+    }
+    /* pagination */
+    article .pagination h5 {
+        font-size: 12px;
+    }
+    article .pagination a{
+        font-size: 20px;
+        padding: 10px;
+    }
+    /* -- NAVIGATION BAR -- */
+    .navbar h5 {
+        font-size: 12px;
+    }
+    .navbar a {
+        font-size: 14px;
+    }
+    /* -- DROPDOWN MENU -- */
+    .dropdown h6 {
+        font-size: 12px;
+    }
+    article .dropdown .Fruits {
+        width: 90px;
+        height: 35px;
+        font-size: 14px;
+    }
+    
+    /* TRANSFORMATION */
+    #transform {
+        font-size: 12px;
+    }
+    article #box1 {
+        width: 80px;
+        height: 74px;
+        font-size: 2.9em;
+        /* FOR POSITION OR ALIGNMENT */
+        transform: translateX(100%) rotateZ(90deg) scale(0.5) skewX(45deg);
+    }
+
+    
+    /* ANIMATION */
+    /* ---ANIMATION--- */
+    #animation {
+        font-size: 11px;
+    }
+    #boxs{
+        /* IF WE ADD THE 'height: 100px;' HERE, IT WILL DISPLACE THE FOOTER, THATS WHY IT'S NOT HERE. */
+        width: 70px;
+    }
+    /* Slide Left */
+    article #box2 {
+        height: 45px;
+        font-size: 1.8em;
+    }
+    /* Slide Right */
+    article #box3 {
+        height: 45px;
+        font-size: 1.8em;
+    }
+    /* Slide Up */
+    article #box4 {
+        height: 45px;
+        font-size: 1.8em;
+    }
+    /* Slide Down */
+    article #box5 {
+        height: 45px;
+        font-size: 1.8em;
+    }
+    article #box6 {
+        height: 25px;
+        font-size: 0.61em;
+    }
+    /* ROTATE VERTICALLY */
+    article #box7 {
+        height: 45px;
+        font-size: 1.8em;
+    }
+    /* ROTATE CIRCULALY */
+    article #box8 {
+        height: 45px;
+        font-size: 1.8em;
+    }
+    /* MAKE ELEMENT GROW(ENLARGE) */
+    article #box9 {
+        height: 45px;
+        font-size: 1.8em;
+    }
+    /* MAKE ELEMENT SMALL */
+    article #box10 {
+        height: 45px;
+        font-size: 1.8em;
+    }
+    /* FADE ELEMENT */
+    article #box11 {
+        height: 45px;
+        font-size: 1.1em;
+        color: black;
+    }
+    /* TO FADE IN AN ELEMENT */
+    article #box12 {
+        background-color: rgb(0, 0, 0);
+        height: 45px;
+        font-size: 1.2em;
+    }
+    /* CHANGE THE COLOR OF AN ELEMENT */
+    article #box13 {
+        height: 45px;
+        font-size: 0.7em;
+    }
+    article #box13:hover {
+        /* MOVE THE ANIMATION NAME AND DURATION TO HERE, THAT ALL. */
+        animation-name: colorChange;
+        animation-duration: 15s;
+    }
+    /* THE GLOW EFFECT */
+    article #box14 {
+        height: 45px;
+        font-size: 1.8em;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+/* TABLET 768px SCREEN */
+@media screen and (max-width: 770px){
+    header #header_name {
+        font-size: 18px;
+        font-weight: bold;
+    }
+    header a {
+        font-size: 9.2px;
+        font-weight: bold;
+        margin: 55px;
+    }
+    /* Titles */
+    h1 {
+        font-size: 17px;
+        font-weight: bolder;
+    }
+
+
+
+
+
+    /* ASIDE */
+    /* Paragraphing 'p' */
+    p {
+        font-size: 11px;
+    }
+    aside {
+        text-align: center;
+    }
+    .list_Title {
+        font-size: 13px;
+    }
+    .ul_list li {
+        font-size: 10px;
+    }
+    .ol_list li {
+        font-size: 10px;
+    }
+    .dl_title {
+        font-size: 11px;
+        font-weight: bold;
+    }
+    .dl_list dl {
+        font-size: 10px;
+    }
+
+
+
+
+
+    /* SECTION */
+    /* Lyrices */
+    h2 {
+        font-size: 12px;
+        font-weight: bold;
+    }
+    pre {
+        font-size: 7.7px;
+    }
+    .hor_line {
+        font-size: 11px;
+    }
+    main a {
+        font-size: 12px;
+    }
+
+    .gif_img p {
+        font-size: 12.5px;
+    }
+    img {
+        width: 90%;
+        height: 80px;
+    }
+
+    audio {
+        width: 200px;
+        height: 25px;
+    }
+    video {
+        width: 190px;
+    }
+
+    /* FORMS */
+    label {
+        font-size: 12px;
+    }
+    input {
+        width: 260px;
+        height: 20px;
+        font-size: 9px;
+    }
+    textarea {
+        width: 200px;
+        height: 40px;
+    }
+
+
+
+
+
+    /* ARTICLE */
+    article {
+        text-align: center;
+    }
+    table {
+        font-size: 7px;
+    }
+    #hello {
+        font-size: 15px;
+    }
+    .Click_Me{
+        background-color: rgb(12, 12, 121);
+        color: rgb(224, 224, 243);
+        width: 90px;
+    }
+    /* -- Image LINK -- */
+    .img_link p {
+        font-size: 9px;
+    }
+    /* GIDIGBA */
+    .img_link h4 {
+        font-size: 14px;
+    }
+    /* Song by Stonebwoy */
+    .img_link h5 {
+        font-size: 9px;
+        font-weight: lighter;
+    }
+    /* -- CSS SKILLS -- */
+    .css_style h3 {
+        font-size: 14px;
+    }
+    article #showPrice p {
+        font-size: 12px;
+    }
+    article #showPrice:hover h4 {
+        font-size: 15px;
+    }
+    /* pagination */
+    article .pagination h5 {
+        font-size: 11px;
+    }
+    article .pagination a{
+        font-size: 18px;
+        padding: 1px;
+    }
+    /* -- NAVIGATION BAR -- */
+    .navbar h5 {
+        font-size: 10px;
+    }
+    .navbar a {
+        font-size: 14px;
+    }
+    /* -- DROPDOWN MENU -- */
+    .dropdown h6 {
+        font-size: 10px;
+    }
+    article .dropdown .Fruits {
+        width: 90px;
+        height: 35px;
+        font-size: 14px;
+    }
+    
+    /* TRANSFORMATION */
+    #transform {
+        font-size: 10px;
+    }
+    article #box1 {
+        width: 60px;
+        height: 60px;
+        font-size: 2em;
+        /* FOR POSITION OR ALIGNMENT */
+        transform: translateX(100%) rotateZ(90deg) scale(0.5) skewX(45deg);
+    }
+
+    
+    /* ANIMATION */
+    /* ---ANIMATION--- */
+    #animation {
+        font-size: 11px;
+    }
+    #boxs{
+        /* IF WE ADD THE 'height: 100px;' HERE, IT WILL DISPLACE THE FOOTER, THATS WHY IT'S NOT HERE. */
+        width: 50px;
+    }
+    /* Slide Left */
+    article #box2 {
+        height: 25px;
+        font-size: 1em;
+    }
+    /* Slide Right */
+    article #box3 {
+        height: 25px;
+        font-size: 1em;
+    }
+    /* Slide Up */
+    article #box4 {
+        height: 25px;
+        font-size: 1em;
+    }
+    /* Slide Down */
+    article #box5 {
+        height: 25px;
+        font-size: 1em;
+    }
+    article #box6 {
+        height: 25px;
+        font-size: 0.61em;
+    }
+    /* ROTATE VERTICALLY */
+    article #box7 {
+        height: 25px;
+        font-size: 1em;
+    }
+    /* ROTATE CIRCULALY */
+    article #box8 {
+        height: 25px;
+        font-size: 1em;
+    }
+    /* MAKE ELEMENT GROW(ENLARGE) */
+    article #box9 {
+        height: 25px;
+        font-size: 1em;
+    }
+    /* MAKE ELEMENT SMALL */
+    article #box10 {
+        height: 25px;
+        font-size: 1em;
+    }
+    /* FADE ELEMENT */
+    article #box11 {
+        height: 25px;
+        font-size: 0.7em;
+        color: black;
+    }
+    /* TO FADE IN AN ELEMENT */
+    article #box12 {
+        background-color: rgb(0, 0, 0);
+        height: 25px;
+        font-size: 0.8em;
+    }
+    /* CHANGE THE COLOR OF AN ELEMENT */
+    article #box13 {
+        height: 25px;
+        font-size: 0.5em;
+    }
+    article #box13:hover {
+        /* MOVE THE ANIMATION NAME AND DURATION TO HERE, THAT ALL. */
+        animation-name: colorChange;
+        animation-duration: 15s;
+    }
+    /* THE GLOW EFFECT */
+    article #box14 {
+        height: 25px;
+        font-size: 1em;
+    }
+}
+
+
+
 
 
 
@@ -488,169 +1295,248 @@ footer a {
 /* LARGE PHONE SCREEN */
 @media screen and (max-width: 500px){
     header #header_name {
-        font-size: 21px;
+        font-size: 17px;
         font-weight: bold;
     }
     header a {
-        font-size: 12px;
+        font-size: 9.2px;
         font-weight: bold;
+        margin: 19px;
     }
+    /* Titles */
     h1 {
-        font-size: 18px;
-        font-weight: bold;
+        font-size: 15px;
+        font-weight: bolder;
     }
-    h2 {
-        font-size: 16px;
-        font-weight: bold;
-    }
+
+
+
+
+
+    /* ASIDE */
+    /* Paragraphing 'p' */
     p {
-        font-size: 11px;
-    }
-    pre {
-        font-size: 4px;
-    }
-    li {
-        font-size: 7px;
-    }
-    dl {
-        text-align: center;
-        font-size: 6px;
-    }
-    #dl_p {
-        font-size: 9px;
+        font-size: 10px;
     }
     aside {
         text-align: center;
     }
+    .list_Title {
+        font-size: 12.5px;
+    }
+    .ul_list li {
+        font-size: 8px;
+    }
+    .ol_list li {
+        font-size: 8px;
+    }
+    .dl_title {
+        font-size: 9px;
+    }
+    .dl_list dl {
+        font-size: 7px;
+    }
+
+
+
+
+
+    /* SECTION */
+    /* Lyrices */
+    h2 {
+        font-size: 12px;
+        font-weight: bold;
+    }
+    pre {
+        font-size: 4.2px;
+    }
+    .hor_line {
+        font-size: 11px;
+    }
     main a {
-        font-size: 15px;
+        font-size: 11px;
+    }
+
+    .gif_img p {
+        font-size: 12.5px;
     }
     img {
-        width: 70%;
-        height: 60%;
+        width: 90%;
+        height: 70px;
     }
+
     audio {
         width: 120px;
-        height: 30px;
+        height: 20px;
     }
     video {
         width: 120px;
     }
+
+    /* FORMS */
     label {
-        font-size: 14px;
+        font-size: 11px;
     }
     input {
-        width: 120px;
+        width: 130px;
+        height: 18px;
+        font-size: 8.8px;
     }
     textarea {
         width: 100px;
         height: 40px;
     }
+
+
+
+
+
+    /* ARTICLE */
     article {
         text-align: center;
     }
     table {
-        font-size: 4.5px;
+        font-size: 4.4px;
     }
-    #greeting {
-        font-size: 15px;
+    #hello {
+        font-size: 12.5px;
     }
-    button {
-        width: 50px;
-        height: 50px;
+    .Click_Me{
+        background-color: rgb(12, 12, 121);
+        color: rgb(224, 224, 243);
+        width: 70px;
     }
-    button p {
-        text-align: center;
-        color: black;
-        font-size: 7px;
-        font-weight: bolder;
-    }
-    h3 {
-        font-size: 12px;
-    }
-    h5 {
+    /* -- Image LINK -- */
+    .img_link p {
         font-size: 9px;
     }
-    h6 {
-        font-size: 8px;
+    /* GIDIGBA */
+    .img_link h4 {
+        font-size: 13px;
     }
-    .dropdown button {
-        height: 30px;
+    /* Song by Stonebwoy */
+    .img_link h5 {
+        font-size: 9px;
+        font-weight: lighter;
+    }
+    /* -- CSS SKILLS -- */
+    .css_style h3 {
+        font-size: 12.5px;
+    }
+    article #showPrice p {
         font-size: 10px;
     }
+    article #showPrice:hover h4 {
+        font-size: 14px;
+    }
+    /* pagination */
+    article .pagination h5 {
+        font-size: 10px;
+    }
+    article .pagination a{
+        font-size: 15px;
+        padding: 1px;
+    }
+    /* -- NAVIGATION BAR -- */
+    .navbar h5 {
+        font-size: 9.5px;
+    }
+    .navbar a {
+        font-size: 13px;
+    }
+    /* -- DROPDOWN MENU -- */
+    .dropdown h6 {
+        font-size: 9px;
+    }
+    article .dropdown .Fruits {
+        width: 80px;
+        height: 25px;
+    }
+    
+    /* TRANSFORMATION */
+    #transform {
+        font-size: 9px;
+    }
     article #box1 {
-        width: 55px;
-        height: 55px;
-        font-size: 2em;
+        width: 50px;
+        height: 50px;
+        font-size: 1.7em;
+        /* FOR POSITION OR ALIGNMENT */
+        transform: translateX(100%) rotateZ(90deg) scale(0.5) skewX(45deg);
     }
 
     
     /* ANIMATION */
+    /* ---ANIMATION--- */
+    #animation {
+        font-size: 10px;
+    }
     #boxs{
         /* IF WE ADD THE 'height: 100px;' HERE, IT WILL DISPLACE THE FOOTER, THATS WHY IT'S NOT HERE. */
-        width: 50px;
-        text-align: center;
+        width: 30px;
     }
     /* Slide Left */
     article #box2 {
-        height: 50px;
-        font-size: 2em;
+        height: 15px;
+        font-size: 0.6em;
     }
     /* Slide Right */
     article #box3 {
-        height: 50px;
-        font-size: 2em;
+        height: 15px;
+        font-size: 0.6em;
     }
     /* Slide Up */
     article #box4 {
-        height: 50px;
-        font-size: 2em;
+        height: 15px;
+        font-size: 0.5em;
     }
     /* Slide Down */
     article #box5 {
-        height: 50px;
-        font-size: 2em;
+        height: 15px;
+        font-size: 0.6em;
     }
     article #box6 {
-        height: 50px;
-        font-size: 0.9em;
+        height: 15px;
+        font-size: 0.6em;
     }
     /* ROTATE VERTICALLY */
     article #box7 {
-        height: 50px;
-        font-size: 2em;
+        height: 15px;
+        font-size: 0.6em;
     }
     /* ROTATE CIRCULALY */
     article #box8 {
-        height: 50px;
-        font-size: 2em;
+        height: 15px;
+        font-size: 0.6em;
     }
     /* MAKE ELEMENT GROW(ENLARGE) */
     article #box9 {
-        height: 50px;
-        font-size: 2em;
+        height: 15px;
+        font-size: 0.6em;
     }
     /* MAKE ELEMENT SMALL */
     article #box10 {
-        height: 50px;
-        font-size: 2em;
+        height: 15px;
+        font-size: 0.6em;
     }
     /* FADE ELEMENT */
     article #box11 {
-        height: 50px;
-        font-size: 1em;
+        height: 15px;
+        font-size: 0.6em;
     }
     /* TO FADE IN AN ELEMENT */
     article #box12 {
-        height: 50px;
-        font-size: 1em;
+        background-color: rgb(0, 0, 0);
+        height: 15px;
+        font-size: 0.2em;
     }
     /* CHANGE THE COLOR OF AN ELEMENT */
     article #box13 {
-        height: 50px;
+        height: 15px;
+        font-size: 0.6em;
     }
     article #box13 p {
-        font-size: 0.7rem;
+        font-size: 0.1rem;
     }
     article #box13:hover {
         /* MOVE THE ANIMATION NAME AND DURATION TO HERE, THAT ALL. */
@@ -659,8 +1545,8 @@ footer a {
     }
     /* THE GLOW EFFECT */
     article #box14 {
-        height: 50px;
-        font-size: 1.2em;
+        height: 15px;
+        font-size: 0.45em;
     }
 }
 
@@ -677,166 +1563,246 @@ footer a {
 /* MEDIUM / NORMAL PHONE SCREEN */
 @media screen and (max-width: 390px){
     header #header_name {
-        font-size: 19px;
+        font-size: 16px;
         font-weight: bold;
     }
     header a {
-        font-size: 10px;
+        font-size: 9.1px;
         font-weight: bold;
+        margin: 18px;
     }
+    /* Titles */
     h1 {
-        font-size: 17px;
-        font-weight: bold;
-    }
-    h2 {
         font-size: 14px;
-        font-weight: bold;
+        font-weight: bolder;
     }
+
+
+
+
+
+    /* ASIDE */
+    /* Paragraphing 'p' */
     p {
-        font-size: 10px;
-    }
-    pre {
-        font-size: 3.4px;
-    }
-    li {
-        font-size: 5px;
-    }
-    dl {
-        text-align: center;
-        font-size: 4.5px;
+        font-size: 9px;
     }
     aside {
         text-align: center;
     }
+    .list_Title {
+        font-size: 12px;
+    }
+    .ul_list li {
+        font-size: 5px;
+    }
+    .ol_list li {
+        font-size: 5px;
+    }
+    .dl_title {
+        font-size: 9px;
+    }
+    .dl_list dl {
+        font-size: 5px;
+    }
+
+
+
+
+
+    /* SECTION */
+    /* Lyrices */
+    h2 {
+        font-size: 11px;
+        font-weight: bold;
+    }
+    pre {
+        font-size: 3.6px;
+    }
+    .hor_line {
+        font-size: 11px;
+    }
     main a {
-        font-size: 15px;
+        font-size: 11px;
+    }
+
+    .gif_img p {
+        font-size: 12.5px;
     }
     img {
-        width: 70%;
-        height: 60%;
+        width: 90%;
+        height: 70px;
     }
+
     audio {
         width: 120px;
-        height: 30px;
+        height: 20px;
     }
     video {
         width: 120px;
     }
+
+    /* FORMS */
     label {
-        font-size: 10px;
+        font-size: 11px;
     }
     input {
-        width: 100px;
+        width: 110px;
+        height: 18px;
+        font-size: 8.5px;
     }
     textarea {
         width: 100px;
         height: 40px;
     }
+
+
+
+
+
+    /* ARTICLE */
     article {
         text-align: center;
     }
     table {
         font-size: 3.8px;
     }
-    #greeting {
-        font-size: 12px;
+    #hello {
+        font-size: 12.5px;
     }
-    article button {
-        width: 50px;
-        height: 50px;
+    .Click_Me{
+        background-color: rgb(12, 12, 121);
+        color: rgb(224, 224, 243);
+        width: 70px;
     }
-    article button p {
-        text-align: center;
-        color: black;
-        font-size: 7px;
-        font-weight: bolder;
-    }
-    h3 {
-        font-size: 12px;
-    }
-    h5 {
+    /* -- Image LINK -- */
+    .img_link p {
         font-size: 9px;
     }
-    h6 {
-        font-size: 8px;
+    /* GIDIGBA */
+    .img_link h4 {
+        font-size: 13px;
     }
-    .dropdown button {
-        height: 30px;
+    /* Song by Stonebwoy */
+    .img_link h5 {
+        font-size: 9px;
+        font-weight: lighter;
+    }
+    /* -- CSS SKILLS -- */
+    .css_style h3 {
+        font-size: 12.5px;
+    }
+    article #showPrice p {
         font-size: 10px;
+    }
+    article #showPrice:hover h4 {
+        font-size: 14px;
+    }
+    article .pagination h5 {
+        font-size: 9px;
+    }
+    article .pagination a{
+        font-size: 14px;
+        padding: 1px;
+    }
+    /* -- NAVIGATION BAR -- */
+    .navbar h5 {
+        font-size: 9px;
+    }
+    .navbar a {
+        font-size: 11px;
+    }
+    /* -- DROPDOWN MENU -- */
+    .dropdown h6 {
+        font-size: 9px;
+    }
+    article .dropdown .Fruits {
+        width: 80px;
+        height: 25px;
+    }
+    
+    /* TRANSFORMATION */
+    #transform {
+        font-size: 9px;
     }
     article #box1 {
         width: 50px;
         height: 50px;
         font-size: 1.7em;
+        /* FOR POSITION OR ALIGNMENT */
+        transform: translateX(100%) rotateZ(90deg) scale(0.5) skewX(45deg);
     }
 
     
     /* ANIMATION */
+    #animation {
+        font-size: 10px;
+    }
     #boxs{
         /* IF WE ADD THE 'height: 100px;' HERE, IT WILL DISPLACE THE FOOTER, THATS WHY IT'S NOT HERE. */
-        width: 40px;
-        text-align: center;
+        width: 20px;
     }
     /* Slide Left */
     article #box2 {
-        height: 40px;
-        font-size: 1.5em;
+        height: 15px;
+        font-size: 0.6em;
     }
     /* Slide Right */
     article #box3 {
-        height: 40px;
-        font-size: 1.5em;
+        height: 15px;
+        font-size: 0.6em;
     }
     /* Slide Up */
     article #box4 {
-        height: 40px;
-        font-size: 1.5em;
+        height: 15px;
+        font-size: 0.5em;
     }
     /* Slide Down */
     article #box5 {
-        height: 40px;
-        font-size: 1.4em;
+        height: 15px;
+        font-size: 0.6em;
     }
     article #box6 {
-        height: 40px;
-        font-size: 0.8em;
+        height: 15px;
+        font-size: 0.6em;
     }
     /* ROTATE VERTICALLY */
     article #box7 {
-        height: 40px;
-        font-size: 1.5em;
+        height: 15px;
+        font-size: 0.6em;
     }
     /* ROTATE CIRCULALY */
     article #box8 {
-        height: 40px;
-        font-size: 1.5em;
+        height: 15px;
+        font-size: 0.6em;
     }
     /* MAKE ELEMENT GROW(ENLARGE) */
     article #box9 {
-        height: 40px;
-        font-size: 1.5em;
+        height: 15px;
+        font-size: 0.6em;
     }
     /* MAKE ELEMENT SMALL */
     article #box10 {
-        height: 40px;
-        font-size: 1.5em;
+        height: 15px;
+        font-size: 0.6em;
     }
     /* FADE ELEMENT */
     article #box11 {
-        height: 40px;
-        font-size: 0.8em;
+        height: 15px;
+        font-size: 0.6em;
     }
     /* TO FADE IN AN ELEMENT */
     article #box12 {
-        height: 40px;
-        font-size: 0.8em;
+        background-color: rgb(0, 0, 0);
+        height: 15px;
+        font-size: 0.2em;
     }
     /* CHANGE THE COLOR OF AN ELEMENT */
     article #box13 {
-        height: 40px;
+        height: 15px;
+        font-size: 0.6em;
     }
     article #box13 p {
-        font-size: 0.5rem;
+        font-size: 0.1rem;
     }
     article #box13:hover {
         /* MOVE THE ANIMATION NAME AND DURATION TO HERE, THAT ALL. */
@@ -845,9 +1811,10 @@ footer a {
     }
     /* THE GLOW EFFECT */
     article #box14 {
-        height: 40px;
-        font-size: 0.9em;
+        height: 15px;
+        font-size: 0.45em;
     }
+    
 }
 
 
@@ -861,89 +1828,179 @@ footer a {
 /* SMALL PHONE SCREEN */
 @media screen and (max-width: 350px){
     header #header_name {
-        font-size: 18px;
+        font-size: 14px;
         font-weight: bold;
     }
     header a {
-        font-size: 9.1px;
+        font-size: 8px;
         font-weight: bold;
+        margin: 12px;
     }
+    /* Titles */
     h1 {
-        font-size: 15px;
+        font-size: 13px;
         font-weight: bolder;
     }
-    h2 {
-        font-size: 12px;
-        font-weight: bold;
-    }
+
+
+
+
+
+    /* ASIDE */
+    /* Paragraphing 'p' */
     p {
         font-size: 8px;
-    }
-    pre {
-        font-size: 2.9px;
-    }
-    li {
-        font-size: 2.5px;
-    }
-    dl {
-        text-align: center;
-        font-size: 2.5px;
     }
     aside {
         text-align: center;
     }
+    .list_Title {
+        font-size: 11px;
+    }
+    .ul_list li {
+        font-size: 3.4px;
+    }
+    .ol_list li {
+        font-size: 3.5px;
+    }
+    .dl_title {
+        font-size: 8px;
+    }
+    .dl_list dl {
+        font-size: 3px;
+    }
+
+
+
+
+
+    /* SECTION */
+    /* Lyrices */
+    h2 {
+        font-size: 10px;
+        font-weight: bold;
+    }
+    pre {
+        font-size: 3.1px;
+    }
+    .hor_line {
+        font-size: 11px;
+    }
     main a {
-        font-size: 15px;
+        font-size: 10px;
+    }
+
+    .gif_img p {
+        font-size: 12px;
     }
     img {
-        width: 60%;
-        height: 50%;
+        width: 70%;
+        height: 40%;
     }
+
     audio {
         width: 100px;
-        height: 30px;
+        height: 20px;
     }
     video {
         width: 100px;
     }
+
+    /* FORMS */
     label {
         font-size: 10px;
     }
     input {
         width: 100px;
+        height: 17px;
+        font-size: 8px;
     }
     textarea {
         width: 100px;
         height: 40px;
     }
+
+
+
+
+
+    /* ARTICLE */
     article {
         text-align: center;
     }
     table {
-        font-size: 3px;
+        font-size: 3.1px;
     }
-    
-    h3 {
+    #hello {
         font-size: 12px;
     }
-    h5 {
+    .Click_Me{
+        background-color: rgb(12, 12, 121);
+        color: rgb(224, 224, 243);
+    }
+    /* -- Image LINK -- */
+    .img_link p {
         font-size: 9px;
     }
-    h6 {
+    /* GIDIGBA */
+    .img_link h4 {
+        font-size: 12px;
+    }
+    /* Song by Stonebwoy */
+    .img_link h5 {
+        font-size: 9px;
+        font-weight: lighter;
+    }
+    /* -- CSS SKILLS -- */
+    .css_style h3 {
+        font-size: 12px;
+    }
+    article #showPrice p {
+        font-size: 9px;
+    }
+    article #showPrice:hover h4 {
+        font-size: 12px;
+    }
+    article .pagination h5 {
+        font-size: 8.4px;
+    }
+    article .pagination a{
+        font-size: 12px;
+        padding: 1px;
+    }
+    /* -- NAVIGATION BAR -- */
+    .navbar h5 {
         font-size: 8px;
     }
-    .dropdown button {
-        height: 30px;
-        font-size: 10px;
+    .navbar a {
+        font-size: 9px;
+    }
+    /* -- DROPDOWN MENU -- */
+    .dropdown h6 {
+        font-size: 8px;
+    }
+    article .dropdown .Fruits {
+        width: 80px;
+        height: 25px;
+    }
+    
+    /* TRANSFORMATION */
+    #transform {
+        font-size: 8px;
     }
     article #box1 {
-        width: 50px;
+        width: 40px;
         height: 50px;
         font-size: 1.7em;
+        /* FOR POSITION OR ALIGNMENT */
+        transform: translateX(100%) rotateZ(90deg) scale(0.5) skewX(45deg);
     }
 
     
     /* ANIMATION */
+    #animation {
+        font-size: 10px;
+    }
     #boxs{
         /* IF WE ADD THE 'height: 100px;' HERE, IT WILL DISPLACE THE FOOTER, THATS WHY IT'S NOT HERE. */
         width: 10px;
