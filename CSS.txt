@@ -1,0 +1,1736 @@
+
+-- STARTED ON Saturday, February 24, 2024, 11:05:25 AM --
+
+
+CSS = CASCADING STYLE SHEET
+
+CSS CAN BE USED INLINE, INTERNAL, AND EXTERNAL.
+
+<!-- INLINE CSS -->
+    <p style="color: lightslategrey;">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quas autem, officia quaerat, odio recusandae mollitia dolores inventore nam tenetur distinctio totam excepturi consequatur nulla a atque deserunt repudiandae porro iste?</p>
+
+<!-- INTERNAL CSS -->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- INTERNAL CSS -->
+    <style>
+        body{
+            background-color: black;
+        }
+        h1{
+            color: white;
+        }
+    </style>
+</head>
+
+<!-- EXTERNAL CSS -->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- EXTERNAL CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+TO SELECT AN ELEMENT BY 'id' YOU USE '#'
+TO SELECT AN ELEMENT BY CLASS YOU USE '.'
+
+
+
+<!-- COLORS -->
+COLORS CAN BE GOTTEN BY 
+NAME = (BLUE), 
+red-green-blue = rgb(0, 0, 0), 
+red-green-blue-transperancy = rgba(0,0,0,0)
+hexdecimal = #ff0000
+hsl = (0, 100%, 50%)
+
+YOU CAN USE THE IN-BUILT COLOR PICKER BY CLICK ON THE COLOR,
+WHEN THE COLOR PICKER DISPLAYS JUST CLICK ON TOP TO CHANGE THE TYPE OF GETTING THE COLOR.
+OR GET ANY COLOR YOU LIKE BY 
+JUST TYPING 'color picker' in Google.
+
+
+
+<!-- FONTS AND GOOGLE FONTS -->
+RECOMMENDED [Sans-serif fonts] are earlier to read on monitor and mobile devices.
+TYPE [Verdana] and enter IT WILL ADDED ALL THE FALL-BACK FONTS.
+THESE ARE ALL UNDER THE [Sans-serif fonts] FONT FAMILY.
+TO ADD A FONT USE THE EXAMPLE BELOW
+[
+    h1{
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+    }
+     
+    USE "" FOR FONTS WITH SPACE WITHIN THEM, EXAMPLE BELOW
+    p{
+        font-family: "lucida console", "courier new";
+    }
+]
+
+/// FONTS SIZE \\\
+STANDARD FONT SIZE IS [16px]
+[1em] MEANS 100% [0.5em] MEANS 50%
+EXAMPLE BELOW
+p{
+    font-size: 1em;
+}
+
+/// FONT WEIGHT \\\
+CAN BE CHANGED TO BOLD, DEFAULT IS NORMAL
+p{
+    font-weight: bold;
+    font-style: italic;
+}
+
+/// FONT STYLE \\\
+CAN BE CHANGED TO ITALIC
+p{
+    font-style: italic;
+}
+
+/// GOOGLE FONTS \\\
+GOOGLE FONTS CAN BE IMPORTED IN THE HTML '<head>' SECTION AND USED IN THE CSS FILE.
+OR YOU CAN VISIT THE GOOGLE FONT WEBSITE AND DONWLOAD THE WHOLE FONT FAMILY YOU WANT,
+AND EXTRACT THE FILE, CREATE 'fonts' FOLDER IN THE FOULDER YOU'RE WORKING IN AND MOVE THE '.ttf'('TrueType font file') FILE YOU WANT TO USE THERE. 
+AND USE THE CODE BELOW TO IMPORT FONT INTO YOUR CSS FILE AT THE VERY TOP(FIRST LINE).            
+{
+    /* ONE '@font-face' FOR ON FONT */
+    @font-face{
+        src: url(fonts/Nunito-Black.ttf);
+        /* YOU CAN REPLACE 'Nunito-Black' ANOTHER NAME YOU LIKE */
+        font-family: Nunito-Black;
+    }
+    @font-face {
+        src: url(fonts/Montserrat-Medium.ttf);
+        font-family: Montserrat-Medium;
+    }
+
+    GET 'woff2' Because It Ligther in Size
+    https://www.fontsquirrel.com/tools/webfont-generator
+    https://gwfh.mranftl.com/fonts/
+
+    /* YOU CAN USE THEM NOW */
+    h1{
+        font-family: Nunito-Black, Verdana, Geneva, Tahoma, sans-serif;
+    }
+
+    p{
+        font-family: Montserrat-Medium, "lucida console", "courier new";
+        font-size: 1em;    
+    }
+}
+
+
+
+<!-- BORDERS IN CSS -->
+EXAMPLES OF BORDER STYLES
+[
+    /* CHOSE ONE STYLE FROM THE 9(NINE) */
+    h1{
+        border-style solid, dashed, dotted, double, groove, ridge, inset, outset, none;
+        /* 'border-width:' IS FOR THE BORDER THINKNESS */
+        border-width: 3px;
+        border-color: blueviolet;
+    }
+    /* THERE'S A SHORT CUT FOR THE CODE ABOVE */
+    h1{
+        border: 5px solid blueviolet;
+    }
+
+    /* THERE'S NO SHORT CUT FOR THE RADIUS */
+    h1{
+        border: 5px solid blueviolet;
+        border-radius: 10px;
+    }
+     
+]
+
+/* YOU CAN DIVIDE THE BORDER INTO 4 PARTS AND HAVE DIFFERENCE STYLES FOR EACH */
+[
+    border-bottom: solid 3px rgb(26, 226, 26);
+    border-top: groove 3px rgb(156, 94, 13);
+    border-right: dotted 3px rgb(231, 231, 18);
+    border-left: dashed 3px red;
+
+    border-radius: 5px;
+]
+
+
+
+<!-- TEXT SHADOW AND BOX SHADOW -->
+
+/// TEXT SHADOWS \\\
+h1{
+    /* THE FIRST NUMBER IS FOR HORIZONTAL(MOVING LEFT),
+     THE SECOND FOR NUMBER FOR VERTICAL(MOVING DOWN),
+     THE THIRD NUMBER FOR BLUR,
+     YOU CAN CHANGE THE COLOR TOO,
+     YOU CAN ADD MORE SHADOWS TOO, BUT SEPARAT THEM WITH ',' AND ADD NEGATIVRE'-' FOR THE POSITION TO CHANGE,
+     DON'T ADD NEGATIVE TO THE BLUR(THIRD NUMBER) */
+    text-shadow: 
+        3px 3px 5px rgb(87, 87, 253), 
+        -3px -3px 5px hsl(342, 71%, 66%);
+}
+
+/// BOX SHADOW \\\
+#box1{
+    /* Box */
+    width: 100px;
+    height: 100px;
+    background-color: rgb(250, 247, 242);
+    /* Shadow */
+    box-shadow: 
+        3px 3px 5px rgb(163, 32, 93),
+        -3px -3px 5px rgb(163, 32, 93);
+    // the "5px" is the thickness or beauty or blur of the shadow
+}
+
+
+
+<!-- MARGINS IN CSS -->
+MARGINS ARE THE SPACE AROUND AN ELEMENT.
+/*
+BY DEFAULT MARGIN IS SET FOR EVERY PAGE.
+
+YOU CAN SET MARGIN FOR THE WHOLE ELEMENT WITH THE 'margin: '
+YOU CAN SET SPECIFIC PARTS WITH THESE 'margin-top: ', 'margin-bottom: ', 'margin-left: ', 'margin-right: ' 
+
+YOU CAN SET AN ELEMENT TO BE STAKE AT ONE SIDE WITH THE 'auto' ATTRIBUTE, SEE HOW BELOW.
+'margin-top: auto;', 'margin-left: auto;', 'margin-right: auto;', 'margin-bottom: auto;'
+FOR CENTER USE CODE BELOW
+'margin: auto;'
+*/
+body{
+    margin: 0px;
+}
+
+.Box{
+    border: solid 5px;
+    font-size: 5em;
+    width: 250px;
+    height: 250px;
+}
+
+#box1{
+    background-color: rgb(105, 236, 236);
+    margin: auto;
+}
+
+#box2{
+    background-color: rgb(93, 243, 118);
+    margin-left: auto;
+}
+
+
+
+<!-- Float -->
+'float' allows other elements to flow around it.
+'float' can allow text to surround image, see how to do it with code.
+[
+    /*TO AVOID OVERFLOW OF ELEMENT ADD THIS CODE TO THE BODY OR CONTAINER */
+    body{
+        border: solid 3px;
+        /* THIS WILL FIX IT */
+        display: flow-root;
+    }
+    #img1{
+        float: left;
+        margin-right: 10px;
+    }
+    #img2{
+        float: right;
+        margin-left: 10px;
+    }
+]
+    
+
+
+<!-- OVERFLOW PROPERTY IN CSS -->
+THE OVERFLOW PROPERTY SETS THE DESIRED BEHAVIOR,
+WHEN CONTENT DOES NOT FIT IN THE PARENT ELEMENT BOX(OVERFLOW).
+PROPERTY CAN BE overflow: visible, hidden, clip, scroll, auto.
+[
+    #good{
+        border: solid 2px;
+        height: 75px;
+        overflow: auto;
+    }
+]
+
+
+
+<!-- THE DISPLAY PROPERTY -->
+DISPLAY PROPERTY SPECIFIES IF/HOW AN ELEMENT IS DISPLAYED.
+
+BLOCK-LEVEL = START ON A NEW LINE, TAKE UP THE FULL WIDTH AVAILABLE
+(h1, div, p, form, header, footer).
+
+INLINE = DO NOT START ON A LINE, WIDTH IS LIMITED TO WHAT IS NEEDED
+(span, a, img).
+
+WITH THE DISPLAY PROPERTY, YOU CAN SET AN INLINE CONTENT TO BEHAVE LIKE A BLOCK CONTENT.
+USE CODE BELOW.
+span{
+    background-color: aquamarine;
+    width: 100;
+    height: 100;
+    /* HERE IS THE DIFFERENCE MAKER */
+    display: block;
+}
+
+YOU CAN ALSO SET THE BLOCK CONTENT TO BEHAVE LIKE A INLINE CONTENT.
+USE CODE BELOW.
+inline
+
+'inline-block' IS MUCH LIKE INLINE, BUT WE CAN GIVE IT WIDTH AND HEIGHT.
+span{
+    background-color: aquamarine;
+    width: 100;
+    height: 100;
+    /* HERE IS THE DIFFERENCE MAKER */
+    display: inline-block;
+}
+
+'none' WILL MAKE DISAPPEAR(NO DISPLAY NO TRACE)
+span{
+    /* HERE IS THE DIFFERENCE MAKER */
+    display: none;
+}
+
+'visibility: hidden;' WILL SHOW NO DISPLAY, BUT EMPTY SPACE WILL BE THERE.
+span{
+    visibility: hidden;
+}
+
+
+
+<!-- WIDTH AND HEIGHT PROPERTY IN CSS -->
+/*
+WHEN WE GIVE THE HEIGHT AND WIDTH,
+THE 'box-sizing: border-box;' IS ABLE TO TAKE CARE OF THE,
+BORDER AND PADDING FOR US, IT WILL PUT EACH BORDER NEXT TO EACH OTHER.
+
+YOU CAN USE these:  min-height: ;
+                    max-height: ;
+                    min-width: ;
+                    max-width: ;
+WHEN NEEDED.
+*/
+.box{
+    border: solid 2px;
+    padding: 25px;
+    box-sizing: border-box;
+    height: auto;
+    width: 50%;
+    float: left;
+}
+
+
+
+<!-- THE POSITION PROPERTY -->
+THERE ARE FIVE POSISBLE VALUS.
+
+relative = positioned relative to where it normal(WHERE IT SHOULD NORMALLY  BE)
+fixed = positioned relative to the viewport(WEB BROWSER)
+absolute = positioned relative to nearest ancestor(CONTAINER){INHERATE POSITION FROM THE CONTAINER}
+sticky = positioned based on scroll position
+static = default positioned for an element 
+
+/// position: relative; \\\
+/*
+WITH 'position: relative;'
+'top: 100px;' WILL PUSH THE ELEMENT DOWN, 
+'top: -100px;' WILL PUSH THE ELEMENT UP,
+'left: 100px;' WILL PUSH THE ELEMENT RIGHT,
+'left: -100px;' WILL PUSH THE ELEMENT LEFT, 
+*/
+#box1{
+    width: 200px;
+    height: 200px;
+    background-color: rgb(109, 198, 240);
+    position: relative;
+    top: 100px;
+    left: 100px;
+}
+
+/// position: fixed; \\\
+/*
+WITH 'position: fixed;'
+
+THIS WILL BE GOOD FOR ADVERTISMENT, SINCE IT'S FIXED.
+'bottom: 0px;' WILL PUSH THE ELEMENT DOWN, 
+'right: 0px;' WILL PUSH THE ELEMENT RIGHT,
+'left: 0px;' WILL PUSH THE ELEMENT LEFT, 
+*/
+#box1{
+    width: 200px;
+    height: 200px;
+    background-color: rgb(109, 198, 240);
+    position: fixed;
+    left: 0px;
+    bottom: 0px;
+}
+
+/// position: absolute; \\\
+/*
+WITH 'position: absolute;'
+
+THE CONTAINER MUST BE FIXED POSITIONED AND NOT ABSOLUTE POSITIONED TOO.
+THE ABSOLUTE WILL MOVE WHEN THE CONTAINER(ANCESTOR) MOVES.
+*/
+#box1{
+    width: 200px;
+    height: 200px;
+    background-color: rgb(109, 198, 240);
+    position: fixed;
+    top: 100px;
+    left: 100px;
+}
+#box2{
+    width: 100px;
+    height: 100px;
+    background-color: rgb(207, 145, 62);
+    position: absolute;
+    top: 50px;
+    left: 50px;
+}
+
+/// position: sticky \\\
+/*
+WITH 'position: sticky'
+
+IT'S MOVES AND FOLLOWS THE SCROLL WHEN IT MOVES
+THATS THE DIFFERENCE BETWEEN 'STICKY' AND 'FIXED'
+'STICKY' FOLLOWS THE MOUSE SCROLL
+'FIXED'  DOSE NOT FIXED, OTHER ITEMS MAY PASS AROUND IT. 
+BUT IT'S KEEPS IT'S POSITION
+*/
+#box1{
+    width: 200px;
+    height: 200px;
+    background-color: rgb(109, 198, 240);
+    position: sticky;
+    top: 0px;
+}
+
+/// position: sticky \\\
+/*
+WITH 'position: sticky'
+
+TO SET AN  ELEMENT'S POSITION TO DEFUALT, JUST CHANGE THE POSITION TO 'position: static;'
+*/
+#box1{
+    position: static;
+}
+
+
+
+<!-- BACKGROUND IMAGE WITH CSS -->
+body{
+    background-image: url(images/BG.jpg);
+    /* IF REPEATING USE THIS*/
+    background-repeat: no-repeat;
+
+    /* TO MAKE AN IMAGE STAY FIXED AT ONE POSITION USE CODE BLOE */
+    background-position: center;
+    background-attachment: fixed;
+
+    /* TO MAKE IMAGE TAKE THE WHOLE PAGE USE CODE BELOW */
+    background-size: cover;
+}
+
+
+
+<!-- COMBINATORS IN CSS -->
+COMBINATORS = EXPLAIN THE RELATIONSHIP BETWEEN LISTED SELECTORS.
+[
+    ' '(one space) = DESCENDANT
+    '>' = CHILD / CHILDREN
+    '~' = GENERAL SIBLING
+    '+' = ADJACENT SIBLING
+
+    EXPLAINATION OF COMBINATOR
+    selector > selector
+    div > p
+    THE EXAMPLE ABOVE MEANS WE'RE APLLYING CSS PROPERTIES ANY 'p' ELEMENT FOUND IN WITHIN THIS 'div' SECTION.
+]
+EXAMPLES:{
+
+    /* ' '(one space) = DESCENDANT */
+    #container p{
+        background-color: rgb(188, 127, 245);
+    }
+
+    /* '>' = CHILD / CHILDREN */
+    #container > p{
+        background-color: rgb(188, 127, 245);
+    }
+
+    /* '~' = GENERAL SIBLING */
+    /* THIS WILL APPLY ONE EVERY 'p' OUTSIDE OF A '<div>' */
+    #container ~ p{
+        background-color: rgb(188, 127, 245);
+    }
+
+    /* '+' = ADJACENT SIBLING */
+    /* THIS WILL APPLY TO THE CLOSERS 'p' OUTSIDE OF A '<div>' */
+    #container + p{
+        background-color: rgb(188, 127, 245);
+    }
+}
+
+
+
+<!-- SUDO CLASSES IN CSS -->
+SUDO CLASSES ARE KEY WORDS ADDED TO A SELECTOR(COMBINATOR),
+THEY MODIFER THE BEHAVIOR OF AN ELEMENT WHEN THEY'RE IN A CERTAIN STATE.
+link example: [
+    a:link{
+        color: rgb(255, 255, 255);
+    }
+    a:hover{
+        color: aqua;
+        font-size: 1.1em;
+    }
+    a:active{
+        color: rgb(171, 226, 43);
+        font-size: 1.1em;
+    }
+    a:visited{
+        color: rgb(0, 0, 0);
+    }
+]
+
+list exampl: [
+    li:hover{
+        background-color: rgb(212, 212, 98);
+    }
+    /* THIS WILL HAPPEN IF NOT HOVERED */
+    li:not(:hover){
+        background-color: rgb(168, 153, 153);
+    }
+]
+
+':nth-child()' example: [
+    /* WHAT YOU PUT HERE WILL BE HIGHLIGTHED */
+    li:nth-child(){
+        background-color: rgb(168, 153, 153);
+    }
+    /* THE FIRST ITEM ON THE LIST WILL BE HIGHLIGTHED */
+    li:nth-child(1){
+        background-color: rgb(168, 153, 153);
+    }
+    /* THE SECOND ITEM ON THE LIST WILL BE HIGHLIGTHED */
+    li:nth-child(2){
+        background-color: rgb(168, 153, 153);
+    }
+    /* ALL ODD ITEM ON THE LIST WILL BE HIGHLIGTHED */
+    li:nth-child(odd){
+        background-color: rgb(168, 153, 153);
+    }
+    /* ALL EVEN ITEM ON THE LIST WILL BE HIGHLIGTHED */
+    li:nth-child(even){
+        background-color: rgb(168, 153, 153);
+    }
+    /* EVERY THREE STEPS THE THIRD ITEM ON THE LIST WILL BE HIGHLIGTHED */
+    li:nth-child(3n){
+        background-color: rgb(168, 153, 153);
+    }
+    /* FROM THE START EVERY THREE STEPS THE THIRD ITEM ON THE LIST WILL BE HIGHLIGTHED */
+    li:nth-child(3n+1){
+        background-color: rgb(168, 153, 153);
+    }
+    /* FROM THE SECOND PLACED ITEM EVERY THREE STEPS THE THIRD ITEM ON THE LIST WILL BE HIGHLIGTHED */
+    li:nth-child(3n+2){
+        background-color: rgb(168, 153, 153);
+    }
+    /* EVERY FOUR STEPS THE FORTH ITEM ON THE LIST WILL BE HIGHLIGTHED */
+    li:nth-child(4n){
+        background-color: rgb(168, 153, 153);
+    }
+]
+
+'div' example: [
+    /* 
+    HOVER TO SHOW INVISIBLE CONTENT,
+    CAN BE USED AS DROPDOWN MENU. 
+    */
+    #greeting p{
+        background-color: rgb(46, 182, 182);
+        padding: 10px;
+        display: none;
+    }
+    #greeting:hover p{
+        display: block;
+    }
+]
+
+
+
+<!-- SUDO-ELEMENT/PSEUDO-ELEMENT IN CSS -->
+PSEUDO-ELEMENT IN CSS ARE KEYWORDS ADDED AFTER A SELECTOR THAT'S USED TO STYLE A SPECIFIC PARTS OF AN ELEMENT.
+EXAMPLE = [selector::pseudo-element]
+MORE EXAMPLES = [
+    h1::first-letter{
+        font-size: 2em;
+        font-style: italic;
+    }
+    p::first-line{
+        background-color: rgba(0, 0, 0, 0.406);
+    }
+    /* ANYTHING SELECTED WITH THE MOUSE */
+    p::selection{
+        color: rgb(9, 204, 9);
+        background-color: rgb(24, 23, 23);
+    }
+
+    /* BEFORE AND AFRWE SHOWING CONTENT */
+    /* BEFORE */
+    #fruit li::before{
+        content: "fruit ";
+    }
+    /* AFTER */
+    #apple::after{
+        content: "🍎";
+    }
+    #orange::after{
+        content: "🍊";
+    }
+    #banana::after{
+        content: "🍌";
+    }
+    /* 
+    TO CHANGE THE BULLETING OF A LIST 
+    USE CODE BELOW.
+    YOU CAN SET THE COLOR AND SIZE TOO. 
+    */
+    #fruit li::marker{
+        content: "✔";
+        color: rgb(51, 222, 51);
+        font-size: 1.2em;
+    }
+]
+
+
+
+<!-- PAGINATION IN HTML AND CSS -->
+PAGINATION IS A METHOD BY WHICH A IS SEPARATED INTO PAGES, 
+AND NUMBERS ARE GIVEN.
+EXAMPLE = [
+    /* 
+    TO SWITCH BETWEEN PAGES,
+    THE EARIERS WAY IS TO LINK THEM(html files) TOGETHER IN HTML
+    */
+    .pagination{
+        text-align: center;
+    }
+    .pagination a{
+        color: black;
+        /* THIS REMOVES THE UNDERLINE FROM THE LINK */
+        text-decoration: none;
+        padding: 8px 15px;
+        display: inline-block;
+    }
+    .pagination a.active{
+        background-color: rgb(162, 240, 43);
+        font-weight: bold;
+        border-radius: 5px;
+    }
+    /* FIND ANY ELEMENT THAT ARE FOUND IN THE ACTIVE CLASS */
+    .pagination a:hover:not(.active){
+        background-color: rgb(180, 175, 175);
+        border-radius: 5px;
+    }
+]
+
+
+
+<!-- DROPDOWN MENU WITH HTML AND CSS -->
+EXAMPLE = [
+    .dropdown button{
+        background-color: rgb(22, 108, 41);
+        color: white;
+        /* 10px heigth 15px weigth */
+        padding: 10px 15px;
+        /* REMOVE BORDER */
+        border: none;
+
+        cursor: pointer;
+    }
+    /* THIS WILL ALLOW YOU TO CLICK BUTTON ONLY TO SHOW CONTENT */
+    .dropdown{
+        display: inline-block;
+    }
+    .dropdown a{
+        /* THIS WILL ARRANGE THE LINKS IN A LIST FORM */
+        display: block;
+
+        color: black;
+        text-decoration: none;
+        padding: 10px 15px;
+    }
+    .dropdown .content{
+        display: none;
+        position: absolute;
+        background-color: rgb(240, 255, 255);
+        min-width: 100px;
+        /* SHADOW, 2px(heigth) 2px(width) 5px(blur) black(color) */
+        box-shadow: 2px 2px 5px black;
+    }
+    /* SHOW CONTENT WHEN HOVERED UPON THE BUTTON */
+    .dropdown:hover .content{
+        display: block; 
+    }
+    .dropdown:hover button{
+        background-color: rgb(29, 167, 16);
+    }
+    .dropdown a:hover{
+        background-color: aqua;
+        font-weight: bold;
+    }
+]
+
+
+
+<!-- NAVIGATION BAR WITH CSS AND HTML -->
+EXAMPLE = [
+    /* LINK THE PAGES(html files) TOGETHER AND NAVIFGATE AROUND */
+    body{
+        margin: 0px;
+    }
+    main{
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+    h1{
+        text-align: center;
+    }
+    .navbar ul{
+        /* TO REMOVE BULLET POINTS IN LIST USE THIS CODE BELOW */
+        list-style-type: none;
+
+        background-color: darkslategrey;
+        padding: 0%;
+        margin: 0%;
+
+        /* ! THIS IS FOR HORIZONTAL NARVIGATION BAR ONLY ! */
+        overflow: hidden;
+    }
+    .navbar a{
+        color: white;
+        text-decoration: none;
+        padding: 15px;
+        display: block;
+        text-align: center;
+    }
+    .navbar a:hover{
+        background-color: rgb(27, 25, 25);
+    }
+
+    /* ! THIS IS FOR HORIZONTAL NARVIGATION BAR ONLY ! */
+    .navbar li{
+        float: left;
+    }
+]
+
+
+
+<!-- SEMANTIC TAGS IN CSS AND HTML -->
+SEMANTIC TAGS = KEEPS YOUR CONTENT ORGANISED.
+                BETTER FOR SEO.
+                ASSISTS SCREEN READERS AND 
+                OTHER TECH FOR ACCESSIBILITY.
+THEY INCLUDE = [
+    <head>   = introductory content
+    <nav>    = navigation bar, links
+    <main>   = main content (section, aside, article, div)
+    <section>= dependent content
+    <aside>  = side content
+    <article>= independent content
+    <footer> = closing content
+]
+EXAMPLE = [
+    /* THIS WILL HELP RECALUATE THE ELEMENTS TO FIX WELL WITH THE WIDTH AND PADDING GIVEN */
+    *{
+        box-sizing: border-box;
+    }
+
+    body{
+        margin: 0;
+    }
+    header{
+        background-color: hsl(0, 0%, 86%);
+        text-align: center;
+        padding: 25px;
+    }
+    .navbar{
+        background-color: hsl(0, 0%, 15%);
+        height: 50px;
+    }
+    /* THIS TAKES UP ONLY 20% OF THE 100% OF WIDTH OF THE PAGE  */
+    aside{
+        width: 20%;
+        float: left;
+        padding: 10px;
+    }
+    /* THIS TAKES UP ONLY 40% OF THE 100% OF WIDTH OF THE PAGE  */
+    section{
+        width: 40%;
+        float: left;
+        padding: 10px;
+    }
+    /* THIS TAKES UP ONLY 40% OF THE 100% OF WIDTH OF THE PAGE  */
+    article{
+        width: 40%;
+        float: left;
+        padding: 10px;
+    }
+
+    /* SETTING FOOTER DISPLAY AS BLOCK AND CLEARING FLOAT EFFECT */
+    footer{
+        /* displaying as block element */
+        display: block;
+
+        /* clearing float effect */
+        clear: both;
+
+        background-color: hsl(0, 0%, 86%);
+        text-align: center;
+        padding: 25px;
+    }
+
+    /* THE STYLE BELOW ONLY APPLIES ON MOBILE DEVICES  */
+    /* IF SCREEN IS 600px or BELOW THE STYLE BELOW WILL BE APPLIED */
+    /* THIS IS ALSO KNOWN AS RESPONSILE CSS */
+    @media screen and (max-width:600px) {
+        aside, section, article{
+            /* CHANGING THE FULL WIDTH TO TAKE THE FULL WIDTH AVAILABLE */
+            width: 100%;
+        }
+    }
+]
+
+<!-- IMAGE GALLERY WITH CSS AND HTML -->
+EXAMPLE = [
+    body{
+        background-color: black;
+        color: white;
+    }
+    .gallery{
+        /* THIS ARRANGE ELEMENTS HORIZONTALY */
+        display: inline-block;
+        
+        border: solid 1px rgb(230, 223, 223);
+        /* THE 'margin' IS APPLIED OUTSIDE OF THE '<div class="gallery"> ELEMENTS, 
+        IT'S THE SPACE BETWEEN THE 'div' AND THE OUTSIDE */
+        margin: 5px;
+
+        /* HERE THE WIDTH OF ALL ELEMENTS IN THE 'gallery' CLASS HAS BEEN SET TO 200px */
+        width: 200px;
+    }
+    .gallery .description{
+        /* 'padding' IS THE SPACE WITHIN THE 'div',
+        AND THE ELEMENT YOU WANT SPACE FOR. */
+        padding: 10px;
+        text-align: center;
+    }
+    .gallery:hover{
+        border: solid 2px rgb(255, 252, 252);
+    }
+    .gallery img{
+        /* THIS IS 100% OF THE 200px SET IN '.gallery{}' */
+        width: 100%;
+    }
+]
+
+
+
+<!-- CSS FLEXBOX -->
+[
+    .container{
+        display: flex;
+        border: solid 10px;
+        /* 90% OF THE HEIGHT OF THE WHOLE PAGE */
+        height: 90vh;
+
+        /* 
+        BY DEFAULT THE 'flex-direction: ' PROPERTY IS SET TO 'row',
+        BUT CAN BE CHANGED TO = ['row-reverse', 'column', 'column-reverse']    
+        */
+        /* flex-direction: row; */
+
+        /* 
+        THE 'justify-content: ' PROPERTY SETS THE ALINGMENT ON THE MAIN AXIS(--), 
+        BY DEFUALT IT'S 'flex-start', 'flex-end' WILL START THE CONTENT FROM THE END,
+        YOU CAN CENTER THEM TOO WITH THE 'justify-content: center;'
+        YOU CAN SET SPACE BETWEEN THEM WITH 'justify-content: space-between;' !! WHEN PAGE EXPANDS THE SPACE BETWEEN THE ELEMENTS WILL ALSO INCREASE !!
+        WE ALSO HAVE 'justify-content: space-around;' THIS WILL INCLUDE SPACE AROUND THE ELEMENT IT SELF, !! WHEN PAGE EXPANDS THE SPACE BETWEEN THE ELEMENTS WILL ALSO INCREASE !!
+        WE ALSO HAVE 'justify-content: space-evenly;' THE SPACE IS A BIT SMALLER, BUT EXPANDS WHEN PAGE ENLARGES, AND ADDS SPACE AROUND THE ELEMENT IT SELF.
+        */
+        /* justify-content: space-evenly; */
+
+        /*
+        'align-items: ' PROPERTY IS USED FOR THE 'cross axis'(|) THE DEFAULT IS 'flex-start;'
+        'align-items: flex-end;' WILL PLACE THE ELEMENTS AT THE BOTTOM OF THE CONTAINER'<div>'
+        'align-items: center;' THIS WILL CENTER THE ELEMETS,
+        'align-items: baseline;' THIS WILL ALINGMENT WILL MAKE SURE THE TEXT WILL BE ALIGNED, 
+        */
+        /* align-items: baseline; */
+
+        /*
+        'flex-wrap: ' PROPERTY. 
+        WHEN ELEMETS ARE TOO MANY TO FIT AND A CONTAINER, 
+        AND THE ELEMENTS ARE BEING COMPRESSED,
+        SET THE 'flex-wrap: wrap;' BY DEFUALT IT'S SET TO NO WRAP 'flex-wrap: nowrap;'
+        THERE'S ALSO 'flex-wrap: wrap-reverse'
+        'flex-wrap: wrap;' IS USED WITH ANOTHER PROPERTY CALLED 'align-content: flex-start;' TO CLOSE USELESS SPACE;
+        THERE'S ALSO 'align-content: flex-end;' WHICH ALIGN ELEMENTS AT THE BOTTOM.
+        THERE'S ALSO 'align-content: center;' WHICH ALIGN ELEMENTS IN THE MIDDLE OR CENTER.
+        THERE'S ALSO 'space-evenly;' 'space-between;' ANY OF THESE CAN BE USED WITH 'align-content: '
+        
+        YOU CAN ALSO ADD A GAB BETWEEN THE ROWS AND COLUMNS OF THE ELEMENTS.
+        'column-gap: 1em;' THAT ADDS A GAB BETWEEN EACH COLUMN.
+        'row-gap: 1em;' THAT ADDS A GAB BERTWEEN EACH ROW.
+        */
+
+        /* 
+        THERE'S THE 'align-self: ' PROPERTY WHICH IS USED ON SINGLE ELEMENT.
+        align-self: center;' ELEMENT WILL BE PLACED IN THE MIDDLE.
+        'align-self: end;' ELEMENT WILL BE PLACED AT THE BOTTOM.
+
+        YOU CAN CHANGE THE ORDER OF ARRANGEMENT TOO.
+        'order: 1;' = THIS WILL PLACE THE ELEMENT AT THE END.
+        'order: -1;' = THIS WILL PLACED THE ELEMENT AT THE BEGINING.
+        */
+    }
+    .box{
+        width: 100px;
+        height: 100px;
+        font-size: 6em;
+        text-align: center;
+        border-radius: 15px;
+    }
+    #box1{
+        background-color: rgb(150, 34, 34);
+    }
+    #box2{
+        background-color: rgb(150, 131, 34);
+    }
+    #box3{
+        background-color: rgb(55, 150, 34);
+    }
+    #box4{
+        background-color: rgb(34, 102, 150);
+    }
+]
+
+
+
+<!-- THE TRANSFORM PROPERTY IN CSS -->
+THE TRANSFORM PORPERTY LETS YOU ROTATE, SCALE, SKEW, OR TRANSLATE AN ELEMENT.
+EXAMPLE = [
+    body{
+        background-color: black;
+        color: white;
+        margin: 0;
+    }
+    #box1{
+        width: 250px;
+        height: 250px;
+        border: solid 5px;
+        font-size: 12em;
+        text-align: center;
+        background-color: rgb(138, 8, 8);
+
+        /* CAN BE APPLIED ON CLASSES '<div>' images borders and many more */
+        /*
+        WITH THE 'translate' PROPERTY WE CAN SET THE 'X'(move left and right) AND 'Y'(move up and down)
+        'translateX' FOR X AXIS 'translateY' ON Y AXIS, AND 'translate' FOR BOTH.
+        WITH 'transform: translateX(100px)' THE NUMBER IN THE '()' WILL MOVE THE ELEMENT TO THE RIGHT,
+        NAGITIVE NUMBERS WILL MOVE IT TO THE LEFT. !! YOU CAN USE 'px' AND '%'!!
+        WITH 'translate(X,Y)' THIS IS USED TO SET THE TWO(left-right, top-down).
+
+        WITH THE ROTATION WE HAVE 'rotateX()', 'rotateY()', AND 'rotateZ()' ALL ARE MEASURED IN 'deg'
+        EXAMPLE = [transform: rotateY(180deg); transform: rotateX(45deg); transform: rotateZ(45deg); ]
+
+        THE SCALE PROPERTY 'transform: scaleX(1);' MEANS 100% on the x-axis.
+        there's also 'transform: scaleXY(1);'
+        YOU CAN SET BOTH 'transform: scale(X,Y);'
+
+        THE 'skew' PROPerty
+        'transform: skewX(45deg);'
+        YOU CAN SET FOR BOTH 'transform: skewX(45deg);'
+
+
+        YOU CAN DO MULTIPLE TRANSFORMATION PROPERTIES.
+        [ 'transform: translateX(100%) rotateZ(90deg) scale(0.5) skewX(45deg);' ]
+        */
+        transform: skewX(45deg);
+    }
+]
+
+
+
+<!-- ANIMATIONS IN CSS -->
+[
+    body{
+        background-color: black;
+        color: white;
+    }
+    #box{
+        width: 250px;
+        height: 250px;
+        background-color: rgb(212, 33, 33);
+        font-size: 12em;
+        text-align: center;
+        animation-name: glowEffect;
+        animation-duration: 5s;
+        animation-play-state: running;
+        animation-timing-function: ease-in-out;
+    }
+
+    /* 
+    TO USE AN ANIMATION WE FIRST NEED TO CREATE AN ANIMATION 
+    USING A KEYFRAME RULE: '@keyframes ANIMATION_NAME' OUTSIDE OF THE '#box{}', SO ON A NEW LINE. 
+
+    TO SLIDE FROM THE RIGHT TO THE LEFT THE ANIMATION WILL BE = [ @keyframes slideLeft{} ]
+    within the '{}' we can use these valus [to, from, and percentage(45%)].
+    In this case the element we want to animate is positioned at the right(at the pc's point of view) 
+    so we will use the 'from' value, to slide from left and come to right.  
+    now within the 'from' we will set the transform like this = [ from{transform: translateX(100px);} ]
+    We need to set the animation name and duration in our '#box{}' like this = [ animation-name: slideLeft; animation-duration: 2s; ]   
+
+    ! THE ANIMATION NAME IS LIKE A FUNCTION NAME YOU CAN NAME IT HOW YOU LIKE !
+
+    TO SLIDE TO RIGHT FROM LEFT, WE WILL COPY THE KEYFRAME AND RENAME 'slideLeft' to 'slideRight' and CHANGE 'from{}' TO 'to{}'
+    AND CHANGE THE ANIMATION NAME IN THE '#box{}' TO  'animation-name: slideRight;'
+    */
+    @keyframes slideLeft{
+        from{transform: translateX(100px);}
+    }
+    @keyframes slideRight{
+        to{transform: translateX(100px);}
+    }
+    @keyframes slideUp{
+        from{transform: translateY(100px);}
+    }
+    @keyframes slideDown{
+        to{transform: translateY(100px);}
+    }
+    /* TO ROTATE WE CAN STILL USE THE from, to, and presentant(45%) */
+    /* ROTATE HORIZONTALY */
+    @keyframes rotateX_Axis{
+        100%{transform: rotateX(360deg);}
+    }
+    /* ROTATE VERTICALLY */
+    @keyframes rotateY_Axis{
+        100%{transform: rotateY(360deg);}
+    }
+    /* ROTATE CIRCULALY */
+    @keyframes rotateZ_Axis{
+        /* !! IF YOU DO 50%{} IT WILL COMPLETE THE ROTAION AND USE THE REMAIN 50% TO ROTATE BACK TO IT'S POSITION, TRY IT. !! */
+        100%{transform: rotateZ(360deg);}
+    }
+    /* MAKE ELEMENT GROW(ENLARGE) */
+    @keyframes grow{
+        /* scale(width, height) scale(1=100%, 2=200%) and so on, TRY IT. */
+        50%{transform: scale(2, 2);}
+    }
+    /* MAKE ELEMENT SMALL */
+    @keyframes shrink{
+        50%{transform: scale(0.5, 0.5);}
+    }
+    /* FADE ELEMENT */
+    @keyframes fade{
+        50%{opacity: 0;}
+    }
+    /* TO FADE IN AN ELEMENT */
+    @keyframes fadeIn{
+        /* IN THE '#box{}' SET THIS 'opacity: 0;' AND SET 'opacity: 1;' HERE */
+        100%{opacity: 1;}
+    }
+    /* CHANGE THE COLOR OF AN ELEMENT */
+    @keyframes colorChange{
+        0%{background-color: rgb(0, 0, 0);}
+        20%{background-color: rgb(119, 25, 25);}
+        60%{background-color: rgb(25, 119, 38);}
+        80%{background-color: rgb(206, 203, 26);}
+        100%{background-color: rgb(0, 174, 255);}
+    }
+
+    /* 
+    THE GLOW EFFECT 
+    */
+    @keyframes glowEffect{
+        /* box-shadow: horizontal, vertical, border-radius, color; */
+        50%{box-shadow: 0px 0px 50px blueviolet;}
+    }
+    /* 
+    YOU CAN SET ANIMATION TO OCCURE WHEN YOU HOVER OVER THE ELEMENT. 
+    [
+        #box:hover{
+            /* MOVE THE ANIMATION NAME AND DURATION TO HERE, THAT ALL. */
+            animation-name: glowEffect;
+            animation-duration: 5s;
+        }
+    ]
+    */
+
+    /* ! NOTE ! */
+    /*
+    [animation-iteration-count]
+    TO MAKE ANIMATION OCCUR MORE THAN ONCE, 
+    SET THE = [animation-iteration-count: The_Number_You_Want;] 
+    YOU CAN SET IT TO infinite [animation-iteration-count: infinite;]
+
+    [animation-direction] 
+    DEFAULT VALUE IS = 'normal;'
+    TO REVERSE DIRECTION = 'animation-direction: reverse;'
+    GOES UP AND DOWN OR LEFT AND RIGTH = 'animation-direction: alternate;' 
+    (REVERSE) GOES UP AND DOWN OR LEFT AND RIGTH = 'animation-direction: alternate-reverse;'
+
+    [animation-play-state]
+    THIS CAN BE USEFUL WITH JAVASCRIPT
+    TO PAUSE ANIMATION = 'animation-play-state: paused;' 
+    TO RUN IT AGAIN = 'animation-play-state: running;'
+
+    [animation-timing-function]
+    THIS IS THE TIMING/SPEED IT USES TO START AND END.
+    THE DEFAULT IS = 'animation-timing-function: ease-in-out;'.
+    FOR CONSTANT SPEED = 'animation-timing-function: linear;'
+    TO SET WHEN TO STOP THE ANIMATION, USE THE 'steps(Num);' 
+    'Num' = ANIMATION WILL STOP, WHEN IT REACHES THE 'Num' OF STEPS = 'animation-timing-function: steps(2);'
+    */
+]
+
+
+
+
+<!-- MEDIA QUERY IN CSS FOR RESPONSIVE PAGE -->
+[
+    /*
+    @media [screen, speech device, print device, and all]
+    screen = phone, desktop, tablet. 
+    speech device = screen reader.
+    print device = how you want the screen to look like on the print dialog.
+    all = this cast across all screens and devices.
+    all = IS THE DEFAULT.
+
+    THIS WILL CHANGE THE TEXT COLOR TO BLUE, WHEN THE SCREEN WIDTH REACHS 500px.
+    THIS WILL APPLY TO ALL SCREENS AND DEVICES.
+    500px and Below.
+    @media all and (max-width: 500px){
+        body{
+            color: blue;
+        }
+    }
+    ||| IS THE SAME THING |||
+    @media (max-width: 500px){
+        body{
+            color: blue;
+        }
+    }
+
+    !! THERE IS ALSO (min-width: ) PROPERTY !!
+
+    ||| ONLY WHEN PRINTING |||
+    @media print {
+        body{
+            color: blue;
+        }
+    }
+
+    ||| ORIENTATION |||
+    landscape = horizontal
+    portrait  = verticaly
+    -- LANDSCAPE --
+    @media (orientation: landscape){
+        .output .previous_operand {
+            color: rgb(12, 5, 5);
+        }
+    }
+    -- PORTRAIT --
+    @media (orientation: portrait){
+        .output .previous_operand {
+            color: rgb(202, 15, 15);
+        }
+    }
+    -- YOU CAN COMBINE THEM WITH THE 'and' OPERATOR
+    @media (orientation: landscape) and (max-width: 500px){
+        .output .previous_operand {
+            color: rgb(71, 19, 212);
+        }
+    }
+    -- YOU CAN COMBINE THEM WITH THE OR STATEMENT REPRESENTED BY ','.
+    @media (orientation: landscape), (max-width: 500px){
+        .output .previous_operand {
+            color: rgb(71, 19, 212);
+        }
+    }
+    */
+]
+
+
+
+///// CENTER ELEMENTS \\\\\
+[
+    .container {
+        // THIS TAKES THE WHOLE PAGE
+        height: 100vh;
+
+        // CENTER ELEMENTS USING [display: flex] OR [display: grip]
+        
+        // USING [display: flex] \\ 
+
+        // display: flex;
+        // // CENTER ON X-AXIS(-)
+        // justify-content: center;
+        // // CENTER ON Y-AXIS(|)
+        // align-items: center;
+        
+        // USING [display: grip] \\
+
+        display: grid;
+        // FOR BOTH X-AXIS(-) AND Y-AXIS(|)
+        place-content: center;
+        background-color: #fff1e6;
+    }
+
+    #size {
+        // POSITION THE SIZE IN CENTER
+        position: absolute;
+        top: 60%;
+        left: 50%;
+        transform: translateX(-50%);
+
+        font-size: 35px;
+        color: red;
+    }
+
+]
+
+
+
+/// PLACE FOOTER AT THE BOTTOM \\\
+[
+    footer {
+        background-color: rgb(10, 5, 5);
+        color: white;
+        text-align: center;
+        padding: 1px;
+        width: 100%;
+
+        // PLACE FOOTER AT THE BOTTOM
+        position: relative;
+        bottom: 0;
+
+        h5 {
+            font-weight: 100;
+        }
+    }
+]
+
+
+
+/// allows the main content to grow and take up available space, PUSH THE footer down WHEN Necessary.
+[
+    main {
+        // PUT THE FOOTER DOWN IF NESSARY
+        flex: 1;
+        
+        width: 100%;
+        padding: 20px;
+        background-color: #1078a1;
+    }
+]
+
+
+
+/// BLUR BACKGROUND \\\
+#clock {
+    font-family: monospace;
+    font-size: 6.5rem;
+    font-weight: bold;
+    text-align: center;
+    color: rgb(0, 0, 0);
+    background-color: rgba(77, 72, 72, 0.116);
+
+    /* BLUR BACKGROUND */
+    backdrop-filter: blur(2px);
+
+    width: 100%;
+}
+
+--- OR ---
+
+#clock {
+    font-family: monospace;
+    font-size: 6.5rem;
+    font-weight: bold;
+    text-align: center;
+    color: rgb(0, 0, 0);
+
+    /* BLUR BACKGROUND */
+    background: #000000a1;
+    backdrop-filter: blur(6px) saturate(200%);
+    -webkit-backdrop-filter: blur(6px) saturate(200%);
+
+    width: 100%;
+}
+
+
+--- AVOID TEXT/ELEMENTS OVERFLOW, ON HEADER/FOOTER ---
+{
+ // Ensure it stays above other content
+ z-index: 1000;
+} 
+
+
+
+--- MAKE HEADER BACKGROUND TRANSPERANT, WHEN YOU SCROLL DOWN ---
+[
+ /// HTML \\\
+ <!DOCTYPE html>
+<html lang="en">
+<body>
+    <header id="header">
+        <h1>My Website</h1>
+    </header>
+    <main>
+        <!-- Add some content to enable scrolling -->
+        <div style="height: 2000px;">
+            <p>Scroll down to see the effect.</p>
+        </div>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
+
+
+ /// CSS \\\
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+header {
+    position: fixed;
+    width: 100%;
+    background-color: #333;
+    color: white;
+    padding: 15px;
+    text-align: center;
+    transition: background-color 0.3s;
+}
+
+header.transparent {
+    background-color: rgba(51, 51, 51, 0.5); /* semi-transparent background */
+}
+
+
+/// JAVASCRIPT \\\
+window.addEventListener('scroll', function() {
+    var header = document.getElementById('header');
+    if (window.scrollY > 50) { // Adjust this value as needed
+        header.classList.add('transparent');
+    } else {
+        header.classList.remove('transparent');
+    }
+});
+This example uses the scroll event to detect when the user scrolls down the page. 
+When the scroll position (window.scrollY) is greater than 50 pixels, it adds the transparent class to the header, making its background semi-transparent. 
+When the scroll position is less than 50 pixels, it removes the transparent class, reverting the header to its original background color. 
+You can adjust the threshold and transparency as needed.
+
+]
+
+
+
+--- SPACE BETWEEN TEXT IN WIGHT ---
+[ letter-spacing: 0px; ]
+
+--- SPACE BETWEEN TEXT IN HIEGHT ---
+[ line-height: 470px; ]
+
+--- DISPLAY ELEMENT WITHOUT BACKGROUND COLOR ---
+[ 
+  color: rgba(240, 248, 255, 0);
+  -webkit-text-stroke: 0.3vw green;
+]
+
+
+
+--- GRIP ---
+ALIGN ELEMENTS IN A GRIP FORMAT
+[
+    #keys {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 10px;
+        padding: 25px;
+    }
+]
+
+
+
+--- CLICK LINK TO SMOOTHLY SCROLL TO CORRESPONDING SECTIONS USING HTML AND CSS ---
+-- HTML --
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smooth Scroll Navigation</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Static Navbar -->
+    <nav>
+        <ul>
+            <li><a href="#pg1">Welcome</a></li>
+            <li><a href="#pg2">Contact</a></li>
+            <li><a href="#pg3">Footer</a></li>
+        </ul>
+    </nav>
+
+    <!-- Pages (Sections) -->
+    <div class="pages" id="pg1">
+        <h1>Welcome Section (Page 1)</h1>
+    </div>
+
+    <div class="pages" id="pg2">
+        <h1>Contact Section (Page 2)</h1>
+    </div>
+
+    <div class="pages" id="pg3">
+        <h1>Footer Section (Page 3)</h1>
+    </div>
+
+</body>
+</html>
+
+
+-- CSS --
+/* Styling for the navigation */
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #333;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    margin: 10px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    background-color: #555;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+nav ul li a:hover {
+    background-color: #777;
+}
+
+/* Pages styling */
+.pages {
+    height: 100dvh; /* 100% of the viewport height */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    background-color: #f4f4f4;
+    border-bottom: 1px solid #ccc;
+}
+
+/* Smooth scrolling */
+html {
+    scroll-behavior: smooth;
+}
+
+
+DONE, ENJOY.
+
+
+
+///// Display: grid; \\\\\
+grids are two dimentail, I can put items on it verticaly(|), horizontaly(-) and both synmotanously.
+I can place item anywhere I want.
+grid works with rows and columns.
+Row lines(|), Column Lines(-).
+grid is made up of cell each square is a cell, in the grid.
+TO FIND THE GRID BOXES AND VALUES THAT YOU CAN USE FOR TRACKING, FOLLOW INSTRUCTIONS BELOW.
+[ right click on the page, and goto inspect, find the grid ".container" in HTML Code, and click on the 'grid' DONE. ]
+
+creating a grid, starts in the HTML.
+[
+    <div class="container">
+        <div class="box box1">1</div>
+        <div class="box box2">2</div>
+        <div class="box box3">3</div>
+        <div class="box box4">4</div>
+        <div class="box box5">5</div>
+        <div class="box box6">6</div>
+        <div class="box box7">7</div>
+        <div class="box box8">8</div>
+        <div class="box box9">9</div>
+        <div class="box box10">10</div>
+    </div>
+]
+
+in CSS 
+[
+    .container {
+        display: grid;
+    }
+]
+
+we need to tell grid how many rows and columns we want.
+
+
+/// [grid-template-rows] and [grid-template-columns] \\\
+To define rows and columns, we used these properties: 
+[
+    grid-template-rows: ;  
+    grid-template-columns: ;
+]
+they work by defining a track for each value that you pass it.
+
+if I do this, I get ONE column of '100px'
+[ grid-template-columns: 100px; ]
+if I do this, I get TWO column of '100px'
+[ grid-template-columns: 100px 100px; ]
+AND SO ON, SAME FOR [ grid-template-rows: ; ] TOO.
+
+TRY THIS
+[
+    grid-template-rows: 100px 100px 100px 100px 100px 100px;
+    grid-template-columns: 100px 100px 100px 100px 100px 100px;
+]
+NOW I HAVE A GRID WITH 6 COLUMNS AND 6 ROWS, AND EACH CELL HAS THE SAME SIZE.
+
+
+/// Dealing with single element, item, cell. \\\
+You can do this
+[
+    .box1 {
+        grid-row-start: 1;
+        grid-row-end: 3;
+        grid-column-start: 1;
+        grid-column-end: 3;
+    }
+
+    SIMPLIFIED
+    [
+        .box1 {
+            grid-row: 1 / 3;
+            grid-column: 1 / 3;
+        }
+    ]
+]
+
+
+/// THE span KEY WORD \\\
+The span means from where every you are span(move, exlarge) yourself by 
+a specific number of times. EXAMPLE BELOW
+[
+    .box1 {
+        grid-row: span 2;
+        grid-column: span 2;
+    }
+]
+!! BUT IT DOES'NT ALLOW YOU TO SPECIFIC AN ACTUAL STARTING AND ENDING POINT, 
+AS A RESULT, IT WILL BE PUSHED AROUND WHEN OTHER ITEMS CHANGE THEIR POINTS. !!
+
+
+/// THE grid-area PROPERTY \\\
+grid area takes four values [ grid-area: row-start, column-start, row-end, column-end; ]
+example
+[
+    // takes the rest of the page
+    .box10 {
+        grid-area: 3 / 1 / 7 / 7;
+    }
+]
+
+
+/// OVERLAYING in grid \\\
+Putting item on-top of another item made EASY with grip.
+example
+I WANT 'Box6' TO BE ON TOP OF 'Box1' and 'Box10'.
+[
+    .box6 {
+        background: #000000;
+        z-index: 1;
+        grid-area: 2 / 3 / 4 / 5
+    }
+]
+
+
+/// IMPLISIT GRIP \\\
+These grid items don't inhiret the values we set in the
+grid-template-rows and grid-template-columns.
+.box9 has become an implisit grip thus why it's smaller.
+
+TO SLOVE THIS, USE EXAMPLES BELOW
+--EX.1--
+[ .container { grid-auto-rows: 100px; } ] What this does is that, it sets
+the size of the rows of any implisit grip that comes.
+
+By Default the implisit grip was given a ROW,
+But you can change it to a COLUMN.
+--Ex.2--
+[ .container { grid-auto-flow: column; } ] With this, all implisit grid will be given
+as a column.
+So we'll have to set the column too as such: [ .container { grid-auto-columns: 100px; } ].
+
+/// grid UNITS \\\
+YOU USE AND MIX ALL UNITS: px, em, rem, %, vw.
+
+/// THE fractional UNIT 'fr' \\\
+LET'S SAY WE HAVE 3 BOXES.
+
+The 'fr' unit represent a fraction value, 
+were each box fills the space available.
+we have 3 columns.
+.container {
+    grid-template-rows: 100px 100px;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+
+/// Minimum and Maximum Size \\\
+You can use this to set the Minimum and Maximum size of the Box.
+It Takes 2 values minmax(Minimum_Value, Maximum_Value);
+.container {
+    grid-template-rows: 100px 100px;
+    grid-template-columns: 100px minmax(100px, 2fr) 1fr;
+}
+
+
+/// THE repeat Notation \\\
+The repeat() works with TWO values, 
+the first is the number of times you want to repeat a value, 
+the Last is the value. 
+EXAMPLE 
+Instand of writing this
+.container {
+    grid-template-rows: 100px 100px;
+}
+DO THIS
+.container {
+    grid-template-rows: repeat(2, 100px);
+}
+
+
+/// THE grid-gap OR gap PROPERTY \\\
+We can add gaps between our grid boxes with the grid-gap property.
+EXAMPLE
+This spaces both the columns and rows
+.container {
+    grid-gap: 1em;
+    OR
+    gap: 1em;
+}
+
+To Set Different space for the columns and rows
+1em for column, 2em for rows.
+.container {
+    grid-gap: 1em 2em;
+    OR
+    gap: 1em 2em;
+}
+
+
+/// Website Layout With Grid \\\
+.container {
+    background: #2c2c2c;
+    display: grid;
+    grid-template-rows: 100px 300px 100px;
+    grid-template-columns: 3fr 1fr;
+
+    // these are the names you're going to use to identify the parts of the website.
+    grid-template-areas: 
+    'header header'
+    'main aside'
+    'footer footer';
+}
+
+// ASSIGN THE PARTS TO THE ELEMENTS OR BOXES
+.box1 {
+    grid-area: header;
+}
+
+.box2 {
+    grid-area: main;
+}
+
+.box3 {
+    grid-area: aside;
+}
+
+.box4 {
+    grid-area: footer;
+}
+
+
+/// Arranging Items with Grid \\\
+The background(justify-items: ; align-items: ;) have a default of 'stretch'. 
+and can be changed to the following: [ start, end, center]
+[
+    .container {
+
+        justify-items: start;
+        align-items: start;
+    }
+]
+
+ARRANGING SINGLE ITEM
+[
+    justify-self: center;
+    align-self: center;
+]
+
+
+/// RESPONSILE Grid \\\
+THE "auto-fit" IS THE DIFFERENCE MAKER.
+
+!! DON'T CENTER THE '.container'
+[
+    .container {
+        background: #2c2c2c;
+        display: grid;
+        grid-template-rows: repeat(4, 100px);    // MAKE SURE TO USE 'px' in 'minmax(100px, 1fr)' FOR THE 'auto-fit' TO WORK.
+        grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    }
+]
+
+
+
+
+
+
+
+
+
+
+
+
+-- FINISHED ON Saturday, March 9, 2024, 03:31 AM --
