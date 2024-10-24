@@ -1,0 +1,23 @@
+button {
+    padding: 10px 20px;
+    font-size: 1.5em;
+    color: white;
+    background-color: rgb(127, 187, 255);
+    border: none;
+    border-radius: 7px;
+    cursor: pointer;
+
+    /* this is the time IT TAKES to fade in*/
+    transition: background-color 0.7s;
+
+    /* BLUR BACKGROUND */
+    backdrop-filter: blur(2px);
+
+    background-image: url(yoo.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    // BG-IMAGE STAYS FIXED 
+    background-attachment: fixed;
+
+}
